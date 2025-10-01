@@ -1,8 +1,8 @@
 id: gold
 title: Gold
-description: Команды уровня Gold, разделённые на когорты «Сияние» и «Импульс».
+description: Команды уровня Gold, разделённые на подгруппы 1 и 2.
 groups:
-- id: gold-alpha
+- id: gold-01
   file: groups/siyanie.yml
-- id: gold-beta
+- id: gold-02
   file: groups/impuls.yml

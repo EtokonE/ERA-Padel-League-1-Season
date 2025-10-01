@@ -1,5 +1,5 @@
-id: gold-alpha
-label: Группа Сияние
+id: gold-01
+label: Подгруппа 1
 teams:
 - id: Алексей Сорокин - Глеб Антонов
   name: Алексей Сорокин - Глеб Антонов
@@ -22,7 +22,7 @@ teams:
   - Егор Пластов
   - Иван Гущин
 matches:
-- id: gold-alpha-001
+- id: gold-01-001
   round: 1
   date: '2025-10-05'
   home: Алексей Сорокин - Глеб Антонов
@@ -35,7 +35,7 @@ matches:
       away: 4
     - home: 6
       away: 3
-- id: gold-alpha-002
+- id: gold-01-002
   round: 1
   date: '2025-10-06'
   home: Роман Щербаков - Дмитрий Литвиненко
@@ -50,7 +50,7 @@ matches:
       away: 3
     - home: 7
       away: 5
-- id: gold-alpha-003
+- id: gold-01-003
   round: 2
   date: '2025-10-12'
   home: Алексей Сорокин - Глеб Антонов
@@ -65,7 +65,7 @@ matches:
       away: 6
     - home: 6
       away: 7
-- id: gold-alpha-004
+- id: gold-01-004
   round: 2
   date: '2025-10-13'
   home: Илья Романов - Сергей Белый
@@ -78,13 +78,13 @@ matches:
       away: 5
     - home: 6
       away: 2
-- id: gold-alpha-005
+- id: gold-01-005
   round: 3
   home: Алексей Сорокин - Глеб Антонов
   away: Егор Пластов - Иван Гущин
   result:
     status: scheduled
-- id: gold-alpha-006
+- id: gold-01-006
   round: 3
   date: '2025-10-21'
   home: Илья Романов - Сергей Белый

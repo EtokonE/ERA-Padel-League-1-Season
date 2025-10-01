@@ -1,5 +1,5 @@
-id: silver-sierra
-label: Группа Ветер
+id: silver-02
+label: Подгруппа 2
 teams:
 - id: Матвей Норкин - Савелий Полозов
   name: Матвей Норкин - Савелий Полозов
@@ -17,7 +17,7 @@ teams:
   - Дмитрий Харламов
   - Фёдор Курбатов
 matches:
-- id: silver-sierra-001
+- id: silver-02-001
   round: 1
   date: '2025-10-08'
   home: Матвей Норкин - Савелий Полозов
@@ -30,7 +30,7 @@ matches:
       away: 6
     - home: 4
       away: 6
-- id: silver-sierra-002
+- id: silver-02-002
   round: 2
   date: '2025-10-15'
   home: Олег Чернов - Антон Белозёров
@@ -45,7 +45,7 @@ matches:
       away: 6
     - home: 7
       away: 5
-- id: silver-sierra-003
+- id: silver-02-003
   round: 3
   home: Дмитрий Харламов - Фёдор Курбатов
   away: Матвей Норкин - Савелий Полозов

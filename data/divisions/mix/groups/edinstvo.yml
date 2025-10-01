@@ -1,5 +1,5 @@
-id: mix-onyx
-label: Группа Единство
+id: mix-01
+label: Подгруппа 1
 teams:
 - id: Максим Калинин - Кокоркина Кристина
   name: Максим Калинин - Кокоркина Кристина
@@ -22,7 +22,7 @@ teams:
   - Максим Бурилло
   - Алёна Томышева
 matches:
-- id: mix-onyx-001
+- id: mix-01-001
   round: 1
   date: '2025-10-10'
   home: Максим Калинин - Кокоркина Кристина
@@ -35,7 +35,7 @@ matches:
       away: 4
     - home: 6
       away: 3
-- id: mix-onyx-002
+- id: mix-01-002
   round: 1
   date: '2025-10-11'
   home: Александр Воронин - Надежда Шипова
@@ -50,7 +50,7 @@ matches:
       away: 6
     - home: 5
       away: 7
-- id: mix-onyx-003
+- id: mix-01-003
   round: 2
   date: '2025-10-17'
   home: Максим Калинин - Кокоркина Кристина
@@ -65,13 +65,13 @@ matches:
       away: 6
     - home: 7
       away: 5
-- id: mix-onyx-004
+- id: mix-01-004
   round: 2
   home: Степан Осипов - Маргарита Провоторова
   away: Максим Бурилло - Алёна Томышева
   result:
     status: scheduled
-- id: mix-onyx-005
+- id: mix-01-005
   round: 3
   home: Максим Бурилло - Алёна Томышева
   away: Максим Калинин - Кокоркина Кристина

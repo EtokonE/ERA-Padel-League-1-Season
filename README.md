@@ -39,23 +39,23 @@ id: gold
 title: Gold
 description: Команды уровня Gold, разделённые на когорты «Сияние» и «Импульс».
 groups:
-  - id: gold-alpha
+  - id: gold-01
     file: groups/siyanie.yml
-  - id: gold-beta
+  - id: gold-02
     file: groups/impuls.yml
 ```
 
 ### Пример файла группы
 
 ```yaml
-id: gold-alpha
-label: Группа Сияние
+id: gold-01
+label: Подгруппа 1
 teams:
   - id: Алексей Сорокин - Глеб Антонов
     name: Алексей Сорокин - Глеб Антонов
     players: [Алексей Сорокин, Глеб Антонов]
 matches:
-  - id: gold-alpha-006
+  - id: gold-01-006
     round: 3
     date: 2025-10-21
     home: Илья Романов - Сергей Белый
@@ -69,15 +69,15 @@ matches:
         - { home: 7, away: 5 }
 ```
 
-> Названия групп теперь нейтральные: `Группа Сияние`, `Группа Импульс`, `Группа Перелив`, `Группа Ветер`, `Группа Изумруд`, `Группа Единство`. Идентификаторы (`gold-alpha`, `silver-delta` и т.п.) сохранены для совместимости.
+> Все дивизионы используют нумерацию подгрупп (`Подгруппа 1`, `Подгруппа 2` и т.д.), идентификаторы теперь выглядят как `gold-01`, `silver-02`, `ladies-01`.
 
 ### Полезные скрипты
 
 - `python scripts/build_data.py` — собирает все YAML-файлы в `data/divisions.json`. Скрипт автоматически сортирует дивизионы в порядке Gold → Silver → Ladies → Mix.
 - `python scripts/manage_matches.py` — быстрый способ пересобрать `data/divisions.json` из YAML без лишних флагов.
 - `python scripts/manage_matches.py --interactive` — пошаговый режим: выбираете дивизион → группу, затем обновляете существующий матч или добавляете новый.
-- `python scripts/manage_matches.py --create --division gold --group gold-alpha --match gold-alpha-010 --home "Алексей" --away "Илья" --round 4 --status scheduled` — пример создания матча из терминала.
-- `python scripts/manage_matches.py --division gold --group gold-alpha --match gold-alpha-006 --status played --winner home --sets 6-4,3-6,7-5` — точечное обновление через аргументы командной строки (флаг `--no-build` сохраняет изменения без пересборки JSON).
+- `python scripts/manage_matches.py --create --division gold --group gold-02 --match gold-02-010 --home "Алексей" --away "Илья" --round 4 --status scheduled` — пример создания матча из терминала.
+- `python scripts/manage_matches.py --division gold --group gold-01 --match gold-01-006 --status played --winner home --sets 6-4,3-6,7-5` — точечное обновление через аргументы командной строки (флаг `--no-build` сохраняет изменения без пересборки JSON).
 
 В ручном режиме скрипт `manage_matches.py` принимает параметры `--date`, `--round`, `--reason`, `--clear-sets`, `--winner`, а для создания матчей — также `--home` и `--away`. Пустая строка в `--date` или `--reason` удаляет поле. Для технических результатов используйте `--status wo --winner home --reason "Техническая победа"`.
 

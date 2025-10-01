@@ -1,5 +1,5 @@
-id: silver-delta
-label: Группа Перелив
+id: silver-01
+label: Подгруппа 1
 teams:
 - id: Игорь Надеждин - Владимир Коренев
   name: Игорь Надеждин - Владимир Коренев
@@ -22,7 +22,7 @@ teams:
   - Никита Жаров
   - Виталий Копылов
 matches:
-- id: silver-delta-001
+- id: silver-01-001
   round: 1
   date: '2025-10-05'
   home: Игорь Надеждин - Владимир Коренев
@@ -37,7 +37,7 @@ matches:
       away: 6
     - home: 6
       away: 4
-- id: silver-delta-002
+- id: silver-01-002
   round: 1
   date: '2025-10-06'
   home: Даниил Журавлёв - Иван Осокин
@@ -50,7 +50,7 @@ matches:
       away: 6
     - home: 3
       away: 6
-- id: silver-delta-003
+- id: silver-01-003
   round: 2
   date: '2025-10-12'
   home: Игорь Надеждин - Владимир Коренев
@@ -65,7 +65,7 @@ matches:
       away: 7
     - home: 6
       away: 7
-- id: silver-delta-004
+- id: silver-01-004
   round: 2
   date: '2025-10-13'
   home: Артём Карпов - Сергей Мартынов
@@ -78,13 +78,13 @@ matches:
       away: 4
     - home: 6
       away: 3
-- id: silver-delta-005
+- id: silver-01-005
   round: 3
   home: Никита Жаров - Виталий Копылов
   away: Игорь Надеждин - Владимир Коренев
   result:
     status: scheduled
-- id: silver-delta-006
+- id: silver-01-006
   round: 3
   date: '2025-10-21'
   home: Артём Карпов - Сергей Мартынов
