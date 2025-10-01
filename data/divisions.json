@@ -1,554 +1,742 @@
 {
-  "updatedAt": "2025-09-24",
+  "season": {
+    "title": "ERA Padel League — Сезон 1",
+    "subtitle": "Октябрь 2025",
+    "updatedAt": "2025-10-18",
+    "note": "Матчи разделены на дивизионы Gold, Silver, Ladies и Mix. Результаты обновляются вручную координаторами лиги."
+  },
+  "rules": {
+    "points": {
+      "win_2_0": 3,
+      "win_2_1": 2,
+      "loss_1_2": 1,
+      "loss_0_2": 0,
+      "forfeit_loss": -1
+    },
+    "rating": {
+      "base": 1000,
+      "win_2_0": 12,
+      "win_2_1": 10
+    },
+    "tiebreakers": [
+      "Очные встречи",
+      "Разница сетов",
+      "Разница геймов",
+      "% выигранных геймов",
+      "Жеребьёвка"
+    ]
+  },
   "divisions": [
     {
-      "id": "men",
-      "title": "Базовый дивизион",
-      "subtitle": "Команды уровня Silver и Gold",
+      "id": "gold",
+      "title": "Gold",
+      "description": "Команды уровня Gold, играющие в группах Alpha и Beta.",
       "groups": [
         {
-          "id": "silver",
-          "label": "Silver"
-        },
-        {
-          "id": "gold",
-          "label": "Gold"
-        }
-      ],
-      "defaultGroup": "all",
-      "groupThresholds": {
-        "gold": 3.0
-      },
-      "entries": [
-        {
-          "players": [
+          "id": "gold-alpha",
+          "label": "Группа Alpha",
+          "teams": [
             {
-              "name": "Максим Калинин",
-              "rating": 4.62,
-              "photo": "images/Максим_Калинин.jpg"
+              "id": "northern-lights",
+              "name": "Северный Свет",
+              "players": [
+                "Алексей Сорокин",
+                "Глеб Антонов"
+              ],
+              "club": "ERA Padel"
             },
             {
-              "name": "Осипов Степан",
-              "rating": 3.0,
-              "photo": "images/Степа_Осипов.jpg"
-            }
-          ]
-        },
-        {
-          "players": [
-            {
-              "name": "Стас Зотов",
-              "rating": 1.95,
-              "photo": "images/Stanislav_Zotov.jpg"
+              "id": "padel-brothers",
+              "name": "Padel Brothers",
+              "players": [
+                "Илья Романов",
+                "Сергей Белый"
+              ],
+              "club": "Padel Story"
             },
             {
-              "name": "Алексей Федоров",
-              "rating": 2.91,
-              "photo": "images/Alexey_Fedorov.jpg"
-            }
-          ]
-        },
-        {
-          "players": [
-            {
-              "name": "Мария Бабич",
-              "rating": 4.19,
-              "photo": "images/Мария_Бабич2.jpg"
+              "id": "team-ignite",
+              "name": "Team Ignite",
+              "players": [
+                "Роман Щербаков",
+                "Дмитрий Литвиненко"
+              ],
+              "club": "ERA Padel"
             },
             {
-              "name": "Никита Мирошниченко",
-              "rating": 3.2,
-              "photo": "images/Никита_Мирошниченко.JPG"
+              "id": "serve-volley",
+              "name": "Serve & Volley",
+              "players": [
+                "Егор Пластов",
+                "Иван Гущин"
+              ],
+              "club": "Padel Story"
             }
-          ]
-        },
-        {
-          "players": [
+          ],
+          "matches": [
             {
-              "name": "Тимур Чарыев",
-              "rating": 2.88,
-              "photo": "images/Тимур_Чарыев.jpg"
+              "id": "gold-alpha-001",
+              "round": 1,
+              "date": "2025-10-05",
+              "arena": "ERA Padel Club",
+              "home": "northern-lights",
+              "away": "padel-brothers",
+              "result": {
+                "status": "played",
+                "winner": "home",
+                "sets": [
+                  { "home": 6, "away": 4 },
+                  { "home": 6, "away": 3 }
+                ]
+              }
             },
             {
-              "name": "Артем Логинов",
-              "rating": 2.5,
-              "photo": "images/Артем_Логинов.jpg"
-            }
-          ]
-        },
-        {
-          "players": [
-            {
-              "name": "Сергей Шевелев",
-              "rating": 1.98,
-              "photo": "images/Сергей_Шевелев.jpg"
+              "id": "gold-alpha-002",
+              "round": 1,
+              "date": "2025-10-06",
+              "arena": "Padel Story",
+              "home": "team-ignite",
+              "away": "serve-volley",
+              "result": {
+                "status": "played",
+                "winner": "home",
+                "sets": [
+                  { "home": 4, "away": 6 },
+                  { "home": 6, "away": 3 },
+                  { "home": 10, "away": 7 }
+                ]
+              }
             },
             {
-              "name": "Евгений Коршунов",
-              "rating": 2.62,
-              "photo": "images/Евгений_Коршунов.jpg"
-            }
-          ]
-        },
-        {
-          "players": [
-            {
-              "name": "Максим Прохоров",
-              "rating": 2.4,
-              "photo": "images/Максим_Прохоров.JPG"
+              "id": "gold-alpha-003",
+              "round": 2,
+              "date": "2025-10-12",
+              "arena": "ERA Padel Club",
+              "home": "northern-lights",
+              "away": "team-ignite",
+              "result": {
+                "status": "played",
+                "winner": "away",
+                "sets": [
+                  { "home": 6, "away": 2 },
+                  { "home": 3, "away": 6 },
+                  { "home": 8, "away": 10 }
+                ]
+              }
             },
             {
-              "name": "Иван Красовский",
-              "rating": 3.12,
-              "photo": "images/Иван_Красовский.jpg"
-            }
-          ]
-        },
-        {
-          "players": [
-            {
-              "name": "Артём Михайлов",
-              "rating": 2.11,
-              "photo": "images/Артем_Михайлов.JPG"
+              "id": "gold-alpha-004",
+              "round": 2,
+              "date": "2025-10-13",
+              "arena": "Padel Story",
+              "home": "padel-brothers",
+              "away": "serve-volley",
+              "result": {
+                "status": "played",
+                "winner": "home",
+                "sets": [
+                  { "home": 7, "away": 5 },
+                  { "home": 6, "away": 2 }
+                ]
+              }
             },
             {
-              "name": "Дмитрий Горохов",
-              "rating": 3.05,
-              "photo": "images/Дмитрий_Горохов.jpg"
-            }
-          ]
-        },
-        {
-          "players": [
-            {
-              "name": "Павел Туманов",
-              "rating": 2.54,
-              "photo": "images/Павел_Туманов.jpg"
-            }
-          ]
-        },
-        {
-          "players": [
-            {
-              "name": "Арсений Селиванов",
-              "rating": 1.9,
-              "photo": "images/Арсений_Селиванов.jpg"
-            }
-          ]
-        },
-        {
-          "players": [
-            {
-              "name": "Владимир Счастливый",
-              "photo": "images/Владимир_Счастливый.jpg",
-              "rating": 1.82
-            }
-          ]
-        },
-        {
-          "players": [
-            {
-              "name": "Евгений Макаров",
-              "rating": 2.6,
-              "photo": "images/Евгений_Макаров.jpg"
+              "id": "gold-alpha-005",
+              "round": 3,
+              "date": "2025-10-20",
+              "arena": "ERA Padel Club",
+              "home": "northern-lights",
+              "away": "serve-volley",
+              "result": {
+                "status": "scheduled"
+              }
             },
             {
-              "name": "Никита Марзаев",
-              "rating": 3.3,
-              "photo": "images/Никита_Марзаев.jpg"
+              "id": "gold-alpha-006",
+              "round": 3,
+              "date": "2025-10-21",
+              "arena": "Padel Story",
+              "home": "padel-brothers",
+              "away": "team-ignite",
+              "result": {
+                "status": "played",
+                "winner": "home",
+                "sets": [
+                  { "home": 5, "away": 7 },
+                  { "home": 6, "away": 4 },
+                  { "home": 10, "away": 8 }
+                ]
+              }
             }
           ]
         },
         {
-          "players": [
+          "id": "gold-beta",
+          "label": "Группа Beta",
+          "teams": [
             {
-              "name": "Артём Субботин",
-              "rating": 2.56,
-              "photo": "images/Артем_Субботин.jpg"
-            }
-          ]
-        },
-        {
-          "players": [
-            {
-              "name": "Рита Сизова",
-              "rating": 3.42,
-              "photo": "images/Маргарита_Сизова.jpg"
+              "id": "skyline",
+              "name": "Skyline",
+              "players": [
+                "Андрей Нестеров",
+                "Владимир Сапсанов"
+              ],
+              "club": "ERA Padel"
             },
             {
-              "name": "Дмитрий Комаров",
-              "rating": 3.32,
-              "photo": "images/Дмитрий_Комаров.jpg"
-            }
-          ]
-        },
-        {
-          "players": [
-            {
-              "name": "Андрей Гаврилов",
-              "rating": 3.85,
-              "photo": "images/Андрей_Гаврилов.jpg"
-            }
-          ]
-        },
-        {
-          "players": [
-            {
-              "name": "Тимофей Шипунов",
-              "rating": 3.14,
-              "photo": "images/Тимофей_Шипунов.jpg"
+              "id": "drop-shots",
+              "name": "Drop Shots",
+              "players": [
+                "Георгий Харитонов",
+                "Павел Арбузов"
+              ],
+              "club": "Padel Story"
             },
             {
-              "name": "Даниил Мартовой",
-              "rating": 1.77,
-              "photo": "images/Даниил_Мартовой.jpg"
+              "id": "backhand-band",
+              "name": "Backhand Band",
+              "players": [
+                "Кирилл Ефимов",
+                "Степан Руднев"
+              ],
+              "club": "ERA Padel"
             }
-          ]
-        },
-        {
-          "players": [
+          ],
+          "matches": [
             {
-              "name": "Роман Самохвалов",
-              "rating": 3.07,
-              "photo": "images/Роман_Самохвалов.jpg"
-            }
-          ]
-        },
-        {
-          "players": [
-            {
-              "name": "Артем Погодин",
-              "photo": "images/Артем_Погодин.jpg",
-              "rating": 3.6
+              "id": "gold-beta-001",
+              "round": 1,
+              "date": "2025-10-07",
+              "arena": "ERA Padel Club",
+              "home": "skyline",
+              "away": "drop-shots",
+              "result": {
+                "status": "wo",
+                "winner": "home",
+                "reason": "Техническая победа: соперник не явился"
+              }
             },
             {
-              "name": "Александр Муллин",
-              "photo": "images/Саша_Мулин.jpg",
-              "rating": 4.2
-            }
-          ]
-        },
-        {
-          "players": [
-            {
-              "name": "Гурген Харатян",
-              "photo": "images/Гурен_Харатян.jpg",
-              "rating": 2.4
+              "id": "gold-beta-002",
+              "round": 2,
+              "date": "2025-10-14",
+              "arena": "Padel Story",
+              "home": "drop-shots",
+              "away": "backhand-band",
+              "result": {
+                "status": "played",
+                "winner": "away",
+                "sets": [
+                  { "home": 7, "away": 5 },
+                  { "home": 4, "away": 6 },
+                  { "home": 7, "away": 10 }
+                ]
+              }
             },
             {
-              "name": "Леонид Бухтеев",
-              "photo": "images/Леонид_Бухтеев.jpg",
-              "rating": 2.9
+              "id": "gold-beta-003",
+              "round": 3,
+              "date": "2025-10-22",
+              "arena": "ERA Padel Club",
+              "home": "backhand-band",
+              "away": "skyline",
+              "result": {
+                "status": "scheduled"
+              }
             }
           ]
-        },
-        {
-          "players": [
-            {
-              "name": "Сергей Уханов",
-              "rating": 3.2,
-              "photo": "images/Сергей_Уханов.jpg"
-            },
-            {
-              "name": "Денис Гаджиев",
-              "photo": "images/Денис_Гаджиев.jpg",
-              "rating": 3.9
-            }
-          ]
-        },
-        {
-          "players": [
-            {
-              "name": "Антон Журенков",
-              "rating": 3.2,
-              "photo": ""
-            },
-            {
-              "name": "Глеб Чабров",
-              "photo": "",
-              "rating": 3.8
-            }
-          ]
-        },
-        {
-          "players": [
-            {
-              "name": "Игорь Разумов",
-              "rating": 3.9,
-              "photo": ""
-            },
-            {
-              "name": "Евгений Бояркин",
-              "photo": "",
-              "rating": 4.1
-            }
-          ]
-        },
-        {
-          "players": [
-            {
-              "name": "Артур Геворгов",
-              "rating": 4.0,
-              "photo": "images/Артур_Геворгов.PNG"
-            },
-            {
-              "name": "Виолетта Хисамова",
-              "photo": "images/Виолетта_Хисамова.jpg",
-              "rating": 3.6
-            }
-          ]
-        },
-        {
-          "players": [
-            {
-              "name": "Александр Коромыслов",
-              "rating": 3.14,
-              "photo": "images/Александр_Коромыслов.jpg"
-            },
-            {
-              "name": "Егор Круглов",
-              "rating": 4.26,
-              "photo": "images/Круглов_Егор.JPG"
-            }
-          ]
-        },
-        {
-          "players": [
-            {
-              "name": "Даниил Лебедев",
-              "rating": 2.8,
-              "photo": "images/Даниил_Лебедев.jpg"
-            },
-            {
-              "name": "Всеволод Сальников",
-              "rating": 1.85,
-              "photo": "images/Всеволод_Сальников.jpg"
-            }
-          ]
-        },
-        {
-          "type": "cta",
-          "tier": "all",
-          "title": "Присоединиться к сезону",
-          "description": "Хотите попасть в подборку и сыграть в ERA League? Заполните форму, и мы подберём дивизион по уровню.",
-          "action": {
-            "label": "Подать заявку",
-            "href": "https://docs.google.com/forms/d/e/1FAIpQLSdRTfmzO4fhf2z4kAp5zxBISki0gIE0uSc55lkXofglKNaQUw/viewform?usp=dialog"
-          }
         }
       ]
     },
     {
-      "id": "women",
-      "title": "Женский дивизион",
-      "subtitle": "Женские пары и одиночные заявки",
-      "entries": [
+      "id": "silver",
+      "title": "Silver",
+      "description": "Команды уровня Silver: динамичные матчи и напряжённые концовки.",
+      "groups": [
         {
-          "players": [
+          "id": "silver-delta",
+          "label": "Группа Delta",
+          "teams": [
             {
-              "name": "Серафима Кардакова",
-              "rating": 1.8,
-              "photo": "images/Серафима.jpg"
+              "id": "polar-aces",
+              "name": "Polar Aces",
+              "players": [
+                "Игорь Надеждин",
+                "Владимир Коренев"
+              ],
+              "club": "ERA Padel"
             },
             {
-              "name": "Елена Лежнина",
-              "rating": 1.8,
-              "photo": "images/Elena_Lezh.jpg"
+              "id": "smash-factor",
+              "name": "Smash Factor",
+              "players": [
+                "Артём Карпов",
+                "Сергей Мартынов"
+              ],
+              "club": "Padel Story"
+            },
+            {
+              "id": "spin-doctors",
+              "name": "Spin Doctors",
+              "players": [
+                "Даниил Журавлёв",
+                "Иван Осокин"
+              ],
+              "club": "ERA Padel"
+            },
+            {
+              "id": "court-rangers",
+              "name": "Court Rangers",
+              "players": [
+                "Никита Жаров",
+                "Виталий Копылов"
+              ],
+              "club": "Padel Story"
             }
-          ]
-        },
-        {
-          "note": "Ищет напарницу",
-          "statuses": [
-            "Готова к подбору",
-            "Добавьте контакты в заявке"
           ],
-          "players": [
+          "matches": [
             {
-              "name": "Кристина Зотова",
-              "rating": 1.54,
-              "photo": "images/Кристина_Зотова.jpg"
+              "id": "silver-delta-001",
+              "round": 1,
+              "date": "2025-10-05",
+              "arena": "ERA Padel Club",
+              "home": "polar-aces",
+              "away": "smash-factor",
+              "result": {
+                "status": "played",
+                "winner": "home",
+                "sets": [
+                  { "home": 6, "away": 4 },
+                  { "home": 3, "away": 6 },
+                  { "home": 10, "away": 6 }
+                ]
+              }
+            },
+            {
+              "id": "silver-delta-002",
+              "round": 1,
+              "date": "2025-10-06",
+              "arena": "Padel Story",
+              "home": "spin-doctors",
+              "away": "court-rangers",
+              "result": {
+                "status": "played",
+                "winner": "away",
+                "sets": [
+                  { "home": 4, "away": 6 },
+                  { "home": 3, "away": 6 }
+                ]
+              }
+            },
+            {
+              "id": "silver-delta-003",
+              "round": 2,
+              "date": "2025-10-12",
+              "arena": "ERA Padel Club",
+              "home": "polar-aces",
+              "away": "spin-doctors",
+              "result": {
+                "status": "played",
+                "winner": "away",
+                "sets": [
+                  { "home": 6, "away": 4 },
+                  { "home": 5, "away": 7 },
+                  { "home": 8, "away": 10 }
+                ]
+              }
+            },
+            {
+              "id": "silver-delta-004",
+              "round": 2,
+              "date": "2025-10-13",
+              "arena": "Padel Story",
+              "home": "smash-factor",
+              "away": "court-rangers",
+              "result": {
+                "status": "played",
+                "winner": "home",
+                "sets": [
+                  { "home": 6, "away": 4 },
+                  { "home": 6, "away": 3 }
+                ]
+              }
+            },
+            {
+              "id": "silver-delta-005",
+              "round": 3,
+              "date": "2025-10-20",
+              "arena": "ERA Padel Club",
+              "home": "court-rangers",
+              "away": "polar-aces",
+              "result": {
+                "status": "scheduled"
+              }
+            },
+            {
+              "id": "silver-delta-006",
+              "round": 3,
+              "date": "2025-10-21",
+              "arena": "Padel Story",
+              "home": "smash-factor",
+              "away": "spin-doctors",
+              "result": {
+                "status": "played",
+                "winner": "away",
+                "sets": [
+                  { "home": 6, "away": 3 },
+                  { "home": 4, "away": 6 },
+                  { "home": 7, "away": 10 }
+                ]
+              }
             }
           ]
         },
         {
-          "note": "Ищет напарницу",
-          "statuses": [
-            "Готова к подбору",
-            "Добавьте контакты в заявке"
+          "id": "silver-sierra",
+          "label": "Группа Sierra",
+          "teams": [
+            {
+              "id": "drop-crew",
+              "name": "Drop Crew",
+              "players": [
+                "Матвей Норкин",
+                "Савелий Полозов"
+              ],
+              "club": "ERA Padel"
+            },
+            {
+              "id": "baseline-rush",
+              "name": "Baseline Rush",
+              "players": [
+                "Олег Чернов",
+                "Антон Белозёров"
+              ],
+              "club": "Padel Story"
+            },
+            {
+              "id": "evening-spin",
+              "name": "Evening Spin",
+              "players": [
+                "Дмитрий Харламов",
+                "Фёдор Курбатов"
+              ],
+              "club": "ERA Padel"
+            }
           ],
-          "players": [
+          "matches": [
             {
-              "name": "Екатерина Федорова",
-              "rating": 1.47,
-              "photo": "images/Екатерина_Федорова.JPG"
-            }
-          ]
-        },
-        {
-          "players": [
-            {
-              "name": "Мария Корсакова",
-              "rating": 1.85,
-              "photo": "images/Мария_Корсакова.jpg"
+              "id": "silver-sierra-001",
+              "round": 1,
+              "date": "2025-10-08",
+              "arena": "ERA Padel Club",
+              "home": "drop-crew",
+              "away": "baseline-rush",
+              "result": {
+                "status": "played",
+                "winner": "away",
+                "sets": [
+                  { "home": 3, "away": 6 },
+                  { "home": 4, "away": 6 }
+                ]
+              }
             },
             {
-              "name": "Светлана Сергеевна",
-              "rating": 2.56,
-              "photo": "images/Светлана_Сергеевна.jpg"
-            }
-          ]
-        },
-        {
-          "players": [
-            {
-              "name": "Кокоркина Кристина",
-              "rating": 1.08,
-              "photo": "images/Кристина_Кокоркина.jpg"
+              "id": "silver-sierra-002",
+              "round": 2,
+              "date": "2025-10-15",
+              "arena": "Padel Story",
+              "home": "baseline-rush",
+              "away": "evening-spin",
+              "result": {
+                "status": "played",
+                "winner": "home",
+                "sets": [
+                  { "home": 6, "away": 4 },
+                  { "home": 3, "away": 6 },
+                  { "home": 10, "away": 7 }
+                ]
+              }
             },
             {
-              "name": "Полина Белякова",
-              "rating": 1.03,
-              "photo": "images/Полина.jpg"
+              "id": "silver-sierra-003",
+              "round": 3,
+              "date": "2025-10-23",
+              "arena": "ERA Padel Club",
+              "home": "evening-spin",
+              "away": "drop-crew",
+              "result": {
+                "status": "scheduled"
+              }
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "ladies",
+      "title": "Ladies",
+      "description": "ERA Ladies League — интенсивные матчи микс-уровня.",
+      "groups": [
         {
-          "players": [
+          "id": "ladies-emerald",
+          "label": "Группа Emerald",
+          "teams": [
             {
-              "name": "Светлана Баумова",
-              "rating": 1.46,
-              "photo": "images/Светлана_Баумова.jpg"
+              "id": "lace-lobsters",
+              "name": "Lace Lobsters",
+              "players": [
+                "Алина Горчакова",
+                "Мария Серова"
+              ],
+              "club": "ERA Padel"
             },
             {
-              "name": "Виктория Баркова",
-              "rating": 1.89,
-              "photo": "images/Виктория_Баркова.jpg"
-            }
-          ]
-        },
-        {
-          "players": [
-            {
-              "name": "Евгения Яровая",
-              "rating": 2.29,
-              "photo": "images/Евгения_Яровая.jpeg"
+              "id": "mint-doubles",
+              "name": "Mint Doubles",
+              "players": [
+                "Полина Данилова",
+                "Софья Никитина"
+              ],
+              "club": "Padel Story"
             },
             {
-              "name": "Александра Гусева",
-              "rating": 2.14,
-              "photo": "images/Александра_Гусева.jpeg"
-            }
-          ]
-        },
-        {
-          "players": [
-            {
-              "name": "Ирина Скупнова",
-              "rating": 2.6,
-              "photo": "images/Ирина_Скупнова.jpg"
+              "id": "moon-courts",
+              "name": "Moon Courts",
+              "players": [
+                "Надя Абрамова",
+                "Анна Филонова"
+              ],
+              "club": "ERA Padel"
             },
             {
-              "name": "Наталия Комарова",
-              "rating": 1.15,
-              "photo": "images/Наталья_Комарова.jpg"
+              "id": "baseline-queens",
+              "name": "Baseline Queens",
+              "players": [
+                "Юлия Берсенева",
+                "Элина Власова"
+              ],
+              "club": "ERA Padel"
+            }
+          ],
+          "matches": [
+            {
+              "id": "ladies-emerald-001",
+              "round": 1,
+              "date": "2025-10-08",
+              "arena": "ERA Padel Club",
+              "home": "lace-lobsters",
+              "away": "mint-doubles",
+              "result": {
+                "status": "played",
+                "winner": "home",
+                "sets": [
+                  { "home": 6, "away": 3 },
+                  { "home": 6, "away": 4 }
+                ]
+              }
+            },
+            {
+              "id": "ladies-emerald-002",
+              "round": 1,
+              "date": "2025-10-09",
+              "arena": "Padel Story",
+              "home": "moon-courts",
+              "away": "baseline-queens",
+              "result": {
+                "status": "played",
+                "winner": "away",
+                "sets": [
+                  { "home": 3, "away": 6 },
+                  { "home": 6, "away": 4 },
+                  { "home": 8, "away": 10 }
+                ]
+              }
+            },
+            {
+              "id": "ladies-emerald-003",
+              "round": 2,
+              "date": "2025-10-15",
+              "arena": "ERA Padel Club",
+              "home": "lace-lobsters",
+              "away": "moon-courts",
+              "result": {
+                "status": "played",
+                "winner": "away",
+                "sets": [
+                  { "home": 6, "away": 4 },
+                  { "home": 3, "away": 6 },
+                  { "home": 9, "away": 11 }
+                ]
+              }
+            },
+            {
+              "id": "ladies-emerald-004",
+              "round": 2,
+              "date": "2025-10-16",
+              "arena": "Padel Story",
+              "home": "mint-doubles",
+              "away": "baseline-queens",
+              "result": {
+                "status": "played",
+                "winner": "away",
+                "sets": [
+                  { "home": 4, "away": 6 },
+                  { "home": 3, "away": 6 }
+                ]
+              }
+            },
+            {
+              "id": "ladies-emerald-005",
+              "round": 3,
+              "date": "2025-10-23",
+              "arena": "ERA Padel Club",
+              "home": "mint-doubles",
+              "away": "moon-courts",
+              "result": {
+                "status": "scheduled"
+              }
+            },
+            {
+              "id": "ladies-emerald-006",
+              "round": 3,
+              "date": "2025-10-24",
+              "arena": "Padel Story",
+              "home": "lace-lobsters",
+              "away": "baseline-queens",
+              "result": {
+                "status": "played",
+                "winner": "home",
+                "sets": [
+                  { "home": 7, "away": 5 },
+                  { "home": 4, "away": 6 },
+                  { "home": 10, "away": 6 }
+                ]
+              }
             }
           ]
-        },
-        {
-          "type": "cta",
-          "title": "Нужна напарница?",
-          "description": "Заполните форму, и мы поможем найти напарницу для участия в ближайших матчах.",
-          "action": {
-            "label": "Оставить заявку",
-            "href": "https://docs.google.com/forms/d/e/1FAIpQLSdRTfmzO4fhf2z4kAp5zxBISki0gIE0uSc55lkXofglKNaQUw/viewform?usp=dialog"
-          }
         }
       ]
     },
     {
       "id": "mix",
-      "title": "Смешанный дивизион",
-      "subtitle": "Идеален для микс-пар разного уровня",
-      "entries": [
+      "title": "Mix",
+      "description": "Смешанные пары и кросс-клубные дуэты.",
+      "groups": [
         {
-          "players": [
+          "id": "mix-onyx",
+          "label": "Группа Onyx",
+          "teams": [
             {
-              "name": "Максим Калинин",
-              "rating": 4.62,
-              "photo": "images/Максим_Кристина1.jpg"
+              "id": "northwave-mix",
+              "name": "Northwave Mix",
+              "players": [
+                "Максим Калинин",
+                "Кокоркина Кристина"
+              ],
+              "club": "ERA Padel"
             },
             {
-              "name": "Кокоркина Кристина",
-              "rating": 1.08,
-              "photo": "images/Максим_Кристина2.jpg"
-            }
-          ]
-        },
-        {
-          "players": [
-            {
-              "name": "Степан Осипов",
-              "rating": 3.0,
-              "photo": "images/Степа_Осипов.jpg"
+              "id": "violet-blend",
+              "name": "Violet Blend",
+              "players": [
+                "Степан Осипов",
+                "Маргарита Провоторова"
+              ],
+              "club": "Padel Story"
             },
             {
-              "name": "Маргарита Провоторова",
-              "rating": 1.0,
-              "photo": "images/Маргарита_Провоторова.jpg"
-            }
-          ]
-        },
-        {
-          "players": [
-            {
-              "name": "Александр Воронин",
-              "rating": 2.0,
-              "photo": "images/Александр_Воронин.jpg"
+              "id": "padel-alliance",
+              "name": "Padel Alliance",
+              "players": [
+                "Александр Воронин",
+                "Надежда Шипова"
+              ],
+              "club": "ERA Padel"
             },
             {
-              "name": "Надежда Шипова",
-              "rating": 1.3,
-              "photo": "images/Надежда_Шипова.jpg"
+              "id": "duo-energy",
+              "name": "Duo Energy",
+              "players": [
+                "Максим Бурилло",
+                "Алёна Томышева"
+              ],
+              "club": "ERA Padel"
             }
-          ]
-        },
-        {
-          "players": [
+          ],
+          "matches": [
             {
-              "name": "Максим Бурилло",
-              "rating": 2.85,
-              "photo": "images/Максим_Бурилло.jpg"
+              "id": "mix-onyx-001",
+              "round": 1,
+              "date": "2025-10-10",
+              "arena": "ERA Padel Club",
+              "home": "northwave-mix",
+              "away": "violet-blend",
+              "result": {
+                "status": "played",
+                "winner": "home",
+                "sets": [
+                  { "home": 6, "away": 4 },
+                  { "home": 6, "away": 3 }
+                ]
+              }
             },
             {
-              "name": "Алёна Томышева",
-              "rating": 3.08,
-              "photo": "images/Алена_Томышева2.jpg"
-            }
-          ]
-        },
-        {
-          "players": [
-            {
-              "name": "Алексей Федоров",
-              "rating": 2.9,
-              "photo": "images/Alexey_Fedorov.jpg"
+              "id": "mix-onyx-002",
+              "round": 1,
+              "date": "2025-10-11",
+              "arena": "Padel Story",
+              "home": "padel-alliance",
+              "away": "duo-energy",
+              "result": {
+                "status": "played",
+                "winner": "away",
+                "sets": [
+                  { "home": 6, "away": 4 },
+                  { "home": 3, "away": 6 },
+                  { "home": 7, "away": 10 }
+                ]
+              }
             },
             {
-              "name": "Екатерина Федорова",
-              "rating": 1.47,
-              "photo": "images/Екатерина_Федорова.JPG"
+              "id": "mix-onyx-003",
+              "round": 2,
+              "date": "2025-10-17",
+              "arena": "ERA Padel Club",
+              "home": "northwave-mix",
+              "away": "padel-alliance",
+              "result": {
+                "status": "played",
+                "winner": "home",
+                "sets": [
+                  { "home": 6, "away": 2 },
+                  { "home": 4, "away": 6 },
+                  { "home": 10, "away": 7 }
+                ]
+              }
+            },
+            {
+              "id": "mix-onyx-004",
+              "round": 2,
+              "date": "2025-10-16",
+              "arena": "Padel Story",
+              "home": "violet-blend",
+              "away": "duo-energy",
+              "result": {
+                "status": "scheduled"
+              }
+            },
+            {
+              "id": "mix-onyx-005",
+              "round": 3,
+              "date": "2025-10-24",
+              "arena": "ERA Padel Club",
+              "home": "duo-energy",
+              "away": "northwave-mix",
+              "result": {
+                "status": "scheduled"
+              }
             }
           ]
-        },
-        {
-          "type": "cta",
-          "title": "Присоединиться к сезону",
-          "description": "Не нашли пару? Расскажите о себе в форме — поможем собрать команду в миксе.",
-          "action": {
-            "label": "Заполнить анкету",
-            "href": "https://docs.google.com/forms/d/e/1FAIpQLSdRTfmzO4fhf2z4kAp5zxBISki0gIE0uSc55lkXofglKNaQUw/viewform?usp=dialog"
-          }
         }
       ]
     }
