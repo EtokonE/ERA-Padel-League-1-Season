@@ -1,8 +1,10 @@
 id: silver
 title: Silver
-description: 'Команды уровня Silver: динамичные матчи и напряжённые концовки.'
+description: 'Команды уровня Silver: разделённые на подгруппы 1, 2 и 3.'
 groups:
 - id: silver-01
   file: groups/silver-01.yml
 - id: silver-02
   file: groups/silver-02.yml
+- id: silver-03
+  file: groups/silver-03.yml

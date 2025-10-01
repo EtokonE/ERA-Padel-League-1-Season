@@ -1,6 +1,6 @@
 id: ladies
 title: Ladies
-description: ERA Ladies League — интенсивные матчи микс-уровня.
+description: ERA Ladies League
 groups:
 - id: ladies-01
   file: groups/ladies-01.yml
