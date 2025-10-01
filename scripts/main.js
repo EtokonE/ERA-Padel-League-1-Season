@@ -391,13 +391,55 @@
       }
     });
 
-    matches.sort((a, b) => {
-      const dateA = a && a.date ? new Date(a.date).getTime() : Infinity;
-      const dateB = b && b.date ? new Date(b.date).getTime() : Infinity;
-      if (dateA === dateB) {
-        return (a.id || '').localeCompare(b.id || '');
+    const getMatchDate = (match) => {
+      if (!match || !match.date) {
+        return null;
       }
-      return dateA - dateB;
+      const time = new Date(match.date).getTime();
+      return Number.isNaN(time) ? null : time;
+    };
+
+    const getMatchRound = (match) => {
+      if (!match || match.round === undefined || match.round === null) {
+        return null;
+      }
+      const numeric = Number(match.round);
+      if (!Number.isNaN(numeric)) {
+        return numeric;
+      }
+      return String(match.round);
+    };
+
+    matches.sort((a, b) => {
+      const dateA = getMatchDate(a);
+      const dateB = getMatchDate(b);
+      if (dateA !== null && dateB !== null && dateA !== dateB) {
+        return dateA - dateB;
+      }
+      if (dateA !== null && dateB === null) {
+        return -1;
+      }
+      if (dateA === null && dateB !== null) {
+        return 1;
+      }
+
+      const roundA = getMatchRound(a);
+      const roundB = getMatchRound(b);
+
+      if (typeof roundA === 'number' && typeof roundB === 'number' && roundA !== roundB) {
+        return roundA - roundB;
+      }
+      if (typeof roundA === 'number' && typeof roundB !== 'number') {
+        return -1;
+      }
+      if (typeof roundA !== 'number' && typeof roundB === 'number') {
+        return 1;
+      }
+      if (roundA !== null && roundB !== null && roundA !== roundB) {
+        return String(roundA).localeCompare(String(roundB), 'ru');
+      }
+
+      return (a && a.id ? a.id : '').localeCompare(b && b.id ? b.id : '');
     });
 
     const processedMatches = [];
@@ -672,9 +714,7 @@
       teamCell.setAttribute('data-label', 'Команда');
       const pill = createEl('div', { className: 'team-pill' });
       pill.appendChild(createEl('span', { className: 'team-pill__name', textContent: team.name }));
-      if (team.players.length) {
-        pill.appendChild(createEl('span', { className: 'team-pill__players', textContent: team.players.join(' · ') }));
-      }
+      // Название уже включает игроков, поэтому не дублируем список игроков отдельной строкой
       if (team.club) {
         pill.appendChild(createEl('span', { className: 'team-pill__club', textContent: team.club }));
       }

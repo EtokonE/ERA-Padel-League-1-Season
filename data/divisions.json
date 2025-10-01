@@ -38,7 +38,7 @@
           "teams": [
             {
               "id": "northern-lights",
-              "name": "Северный Свет",
+              "name": "Алексей Сорокин - Глеб Антонов",
               "players": [
                 "Алексей Сорокин",
                 "Глеб Антонов"
@@ -47,7 +47,7 @@
             },
             {
               "id": "padel-brothers",
-              "name": "Padel Brothers",
+              "name": "Илья Романов - Сергей Белый",
               "players": [
                 "Илья Романов",
                 "Сергей Белый"
@@ -56,7 +56,7 @@
             },
             {
               "id": "team-ignite",
-              "name": "Team Ignite",
+              "name": "Роман Щербаков - Дмитрий Литвиненко",
               "players": [
                 "Роман Щербаков",
                 "Дмитрий Литвиненко"
@@ -65,7 +65,7 @@
             },
             {
               "id": "serve-volley",
-              "name": "Serve & Volley",
+              "name": "Егор Пластов - Иван Гущин",
               "players": [
                 "Егор Пластов",
                 "Иван Гущин"
@@ -85,8 +85,14 @@
                 "status": "played",
                 "winner": "home",
                 "sets": [
-                  { "home": 6, "away": 4 },
-                  { "home": 6, "away": 3 }
+                  {
+                    "home": 6,
+                    "away": 4
+                  },
+                  {
+                    "home": 6,
+                    "away": 3
+                  }
                 ]
               }
             },
@@ -101,9 +107,18 @@
                 "status": "played",
                 "winner": "home",
                 "sets": [
-                  { "home": 4, "away": 6 },
-                  { "home": 6, "away": 3 },
-                  { "home": 10, "away": 7 }
+                  {
+                    "home": 4,
+                    "away": 6
+                  },
+                  {
+                    "home": 6,
+                    "away": 3
+                  },
+                  {
+                    "home": 7,
+                    "away": 5
+                  }
                 ]
               }
             },
@@ -118,9 +133,18 @@
                 "status": "played",
                 "winner": "away",
                 "sets": [
-                  { "home": 6, "away": 2 },
-                  { "home": 3, "away": 6 },
-                  { "home": 8, "away": 10 }
+                  {
+                    "home": 6,
+                    "away": 2
+                  },
+                  {
+                    "home": 3,
+                    "away": 6
+                  },
+                  {
+                    "home": 6,
+                    "away": 7
+                  }
                 ]
               }
             },
@@ -135,15 +159,20 @@
                 "status": "played",
                 "winner": "home",
                 "sets": [
-                  { "home": 7, "away": 5 },
-                  { "home": 6, "away": 2 }
+                  {
+                    "home": 7,
+                    "away": 5
+                  },
+                  {
+                    "home": 6,
+                    "away": 2
+                  }
                 ]
               }
             },
             {
               "id": "gold-alpha-005",
               "round": 3,
-              "date": "2025-10-20",
               "arena": "ERA Padel Club",
               "home": "northern-lights",
               "away": "serve-volley",
@@ -162,9 +191,18 @@
                 "status": "played",
                 "winner": "home",
                 "sets": [
-                  { "home": 5, "away": 7 },
-                  { "home": 6, "away": 4 },
-                  { "home": 10, "away": 8 }
+                  {
+                    "home": 5,
+                    "away": 7
+                  },
+                  {
+                    "home": 6,
+                    "away": 4
+                  },
+                  {
+                    "home": 7,
+                    "away": 5
+                  }
                 ]
               }
             }
@@ -176,7 +214,7 @@
           "teams": [
             {
               "id": "skyline",
-              "name": "Skyline",
+              "name": "Андрей Нестеров - Владимир Сапсанов",
               "players": [
                 "Андрей Нестеров",
                 "Владимир Сапсанов"
@@ -185,7 +223,7 @@
             },
             {
               "id": "drop-shots",
-              "name": "Drop Shots",
+              "name": "Георгий Харитонов - Павел Арбузов",
               "players": [
                 "Георгий Харитонов",
                 "Павел Арбузов"
@@ -194,7 +232,7 @@
             },
             {
               "id": "backhand-band",
-              "name": "Backhand Band",
+              "name": "Кирилл Ефимов - Степан Руднев",
               "players": [
                 "Кирилл Ефимов",
                 "Степан Руднев"
@@ -227,16 +265,24 @@
                 "status": "played",
                 "winner": "away",
                 "sets": [
-                  { "home": 7, "away": 5 },
-                  { "home": 4, "away": 6 },
-                  { "home": 7, "away": 10 }
+                  {
+                    "home": 7,
+                    "away": 5
+                  },
+                  {
+                    "home": 4,
+                    "away": 6
+                  },
+                  {
+                    "home": 5,
+                    "away": 7
+                  }
                 ]
               }
             },
             {
               "id": "gold-beta-003",
               "round": 3,
-              "date": "2025-10-22",
               "arena": "ERA Padel Club",
               "home": "backhand-band",
               "away": "skyline",
@@ -259,7 +305,7 @@
           "teams": [
             {
               "id": "polar-aces",
-              "name": "Polar Aces",
+              "name": "Игорь Надеждин - Владимир Коренев",
               "players": [
                 "Игорь Надеждин",
                 "Владимир Коренев"
@@ -268,7 +314,7 @@
             },
             {
               "id": "smash-factor",
-              "name": "Smash Factor",
+              "name": "Артём Карпов - Сергей Мартынов",
               "players": [
                 "Артём Карпов",
                 "Сергей Мартынов"
@@ -277,7 +323,7 @@
             },
             {
               "id": "spin-doctors",
-              "name": "Spin Doctors",
+              "name": "Даниил Журавлёв - Иван Осокин",
               "players": [
                 "Даниил Журавлёв",
                 "Иван Осокин"
@@ -286,7 +332,7 @@
             },
             {
               "id": "court-rangers",
-              "name": "Court Rangers",
+              "name": "Никита Жаров - Виталий Копылов",
               "players": [
                 "Никита Жаров",
                 "Виталий Копылов"
@@ -306,9 +352,18 @@
                 "status": "played",
                 "winner": "home",
                 "sets": [
-                  { "home": 6, "away": 4 },
-                  { "home": 3, "away": 6 },
-                  { "home": 10, "away": 6 }
+                  {
+                    "home": 6,
+                    "away": 4
+                  },
+                  {
+                    "home": 3,
+                    "away": 6
+                  },
+                  {
+                    "home": 6,
+                    "away": 4
+                  }
                 ]
               }
             },
@@ -323,8 +378,14 @@
                 "status": "played",
                 "winner": "away",
                 "sets": [
-                  { "home": 4, "away": 6 },
-                  { "home": 3, "away": 6 }
+                  {
+                    "home": 4,
+                    "away": 6
+                  },
+                  {
+                    "home": 3,
+                    "away": 6
+                  }
                 ]
               }
             },
@@ -339,9 +400,18 @@
                 "status": "played",
                 "winner": "away",
                 "sets": [
-                  { "home": 6, "away": 4 },
-                  { "home": 5, "away": 7 },
-                  { "home": 8, "away": 10 }
+                  {
+                    "home": 6,
+                    "away": 4
+                  },
+                  {
+                    "home": 5,
+                    "away": 7
+                  },
+                  {
+                    "home": 6,
+                    "away": 7
+                  }
                 ]
               }
             },
@@ -356,15 +426,20 @@
                 "status": "played",
                 "winner": "home",
                 "sets": [
-                  { "home": 6, "away": 4 },
-                  { "home": 6, "away": 3 }
+                  {
+                    "home": 6,
+                    "away": 4
+                  },
+                  {
+                    "home": 6,
+                    "away": 3
+                  }
                 ]
               }
             },
             {
               "id": "silver-delta-005",
               "round": 3,
-              "date": "2025-10-20",
               "arena": "ERA Padel Club",
               "home": "court-rangers",
               "away": "polar-aces",
@@ -383,9 +458,18 @@
                 "status": "played",
                 "winner": "away",
                 "sets": [
-                  { "home": 6, "away": 3 },
-                  { "home": 4, "away": 6 },
-                  { "home": 7, "away": 10 }
+                  {
+                    "home": 6,
+                    "away": 3
+                  },
+                  {
+                    "home": 4,
+                    "away": 6
+                  },
+                  {
+                    "home": 5,
+                    "away": 7
+                  }
                 ]
               }
             }
@@ -397,7 +481,7 @@
           "teams": [
             {
               "id": "drop-crew",
-              "name": "Drop Crew",
+              "name": "Матвей Норкин - Савелий Полозов",
               "players": [
                 "Матвей Норкин",
                 "Савелий Полозов"
@@ -406,7 +490,7 @@
             },
             {
               "id": "baseline-rush",
-              "name": "Baseline Rush",
+              "name": "Олег Чернов - Антон Белозёров",
               "players": [
                 "Олег Чернов",
                 "Антон Белозёров"
@@ -415,7 +499,7 @@
             },
             {
               "id": "evening-spin",
-              "name": "Evening Spin",
+              "name": "Дмитрий Харламов - Фёдор Курбатов",
               "players": [
                 "Дмитрий Харламов",
                 "Фёдор Курбатов"
@@ -435,8 +519,14 @@
                 "status": "played",
                 "winner": "away",
                 "sets": [
-                  { "home": 3, "away": 6 },
-                  { "home": 4, "away": 6 }
+                  {
+                    "home": 3,
+                    "away": 6
+                  },
+                  {
+                    "home": 4,
+                    "away": 6
+                  }
                 ]
               }
             },
@@ -451,16 +541,24 @@
                 "status": "played",
                 "winner": "home",
                 "sets": [
-                  { "home": 6, "away": 4 },
-                  { "home": 3, "away": 6 },
-                  { "home": 10, "away": 7 }
+                  {
+                    "home": 6,
+                    "away": 4
+                  },
+                  {
+                    "home": 3,
+                    "away": 6
+                  },
+                  {
+                    "home": 7,
+                    "away": 5
+                  }
                 ]
               }
             },
             {
               "id": "silver-sierra-003",
               "round": 3,
-              "date": "2025-10-23",
               "arena": "ERA Padel Club",
               "home": "evening-spin",
               "away": "drop-crew",
@@ -483,7 +581,7 @@
           "teams": [
             {
               "id": "lace-lobsters",
-              "name": "Lace Lobsters",
+              "name": "Алина Горчакова - Мария Серова",
               "players": [
                 "Алина Горчакова",
                 "Мария Серова"
@@ -492,7 +590,7 @@
             },
             {
               "id": "mint-doubles",
-              "name": "Mint Doubles",
+              "name": "Полина Данилова - Софья Никитина",
               "players": [
                 "Полина Данилова",
                 "Софья Никитина"
@@ -501,7 +599,7 @@
             },
             {
               "id": "moon-courts",
-              "name": "Moon Courts",
+              "name": "Надя Абрамова - Анна Филонова",
               "players": [
                 "Надя Абрамова",
                 "Анна Филонова"
@@ -510,7 +608,7 @@
             },
             {
               "id": "baseline-queens",
-              "name": "Baseline Queens",
+              "name": "Юлия Берсенева - Элина Власова",
               "players": [
                 "Юлия Берсенева",
                 "Элина Власова"
@@ -530,8 +628,14 @@
                 "status": "played",
                 "winner": "home",
                 "sets": [
-                  { "home": 6, "away": 3 },
-                  { "home": 6, "away": 4 }
+                  {
+                    "home": 6,
+                    "away": 3
+                  },
+                  {
+                    "home": 6,
+                    "away": 4
+                  }
                 ]
               }
             },
@@ -546,9 +650,18 @@
                 "status": "played",
                 "winner": "away",
                 "sets": [
-                  { "home": 3, "away": 6 },
-                  { "home": 6, "away": 4 },
-                  { "home": 8, "away": 10 }
+                  {
+                    "home": 3,
+                    "away": 6
+                  },
+                  {
+                    "home": 6,
+                    "away": 4
+                  },
+                  {
+                    "home": 6,
+                    "away": 7
+                  }
                 ]
               }
             },
@@ -563,9 +676,18 @@
                 "status": "played",
                 "winner": "away",
                 "sets": [
-                  { "home": 6, "away": 4 },
-                  { "home": 3, "away": 6 },
-                  { "home": 9, "away": 11 }
+                  {
+                    "home": 6,
+                    "away": 4
+                  },
+                  {
+                    "home": 3,
+                    "away": 6
+                  },
+                  {
+                    "home": 5,
+                    "away": 7
+                  }
                 ]
               }
             },
@@ -580,15 +702,20 @@
                 "status": "played",
                 "winner": "away",
                 "sets": [
-                  { "home": 4, "away": 6 },
-                  { "home": 3, "away": 6 }
+                  {
+                    "home": 4,
+                    "away": 6
+                  },
+                  {
+                    "home": 3,
+                    "away": 6
+                  }
                 ]
               }
             },
             {
               "id": "ladies-emerald-005",
               "round": 3,
-              "date": "2025-10-23",
               "arena": "ERA Padel Club",
               "home": "mint-doubles",
               "away": "moon-courts",
@@ -607,9 +734,18 @@
                 "status": "played",
                 "winner": "home",
                 "sets": [
-                  { "home": 7, "away": 5 },
-                  { "home": 4, "away": 6 },
-                  { "home": 10, "away": 6 }
+                  {
+                    "home": 7,
+                    "away": 5
+                  },
+                  {
+                    "home": 4,
+                    "away": 6
+                  },
+                  {
+                    "home": 6,
+                    "away": 4
+                  }
                 ]
               }
             }
@@ -628,7 +764,7 @@
           "teams": [
             {
               "id": "northwave-mix",
-              "name": "Northwave Mix",
+              "name": "Максим Калинин - Кокоркина Кристина",
               "players": [
                 "Максим Калинин",
                 "Кокоркина Кристина"
@@ -637,7 +773,7 @@
             },
             {
               "id": "violet-blend",
-              "name": "Violet Blend",
+              "name": "Степан Осипов - Маргарита Провоторова",
               "players": [
                 "Степан Осипов",
                 "Маргарита Провоторова"
@@ -646,7 +782,7 @@
             },
             {
               "id": "padel-alliance",
-              "name": "Padel Alliance",
+              "name": "Александр Воронин - Надежда Шипова",
               "players": [
                 "Александр Воронин",
                 "Надежда Шипова"
@@ -655,7 +791,7 @@
             },
             {
               "id": "duo-energy",
-              "name": "Duo Energy",
+              "name": "Максим Бурилло - Алёна Томышева",
               "players": [
                 "Максим Бурилло",
                 "Алёна Томышева"
@@ -675,8 +811,14 @@
                 "status": "played",
                 "winner": "home",
                 "sets": [
-                  { "home": 6, "away": 4 },
-                  { "home": 6, "away": 3 }
+                  {
+                    "home": 6,
+                    "away": 4
+                  },
+                  {
+                    "home": 6,
+                    "away": 3
+                  }
                 ]
               }
             },
@@ -691,9 +833,18 @@
                 "status": "played",
                 "winner": "away",
                 "sets": [
-                  { "home": 6, "away": 4 },
-                  { "home": 3, "away": 6 },
-                  { "home": 7, "away": 10 }
+                  {
+                    "home": 6,
+                    "away": 4
+                  },
+                  {
+                    "home": 3,
+                    "away": 6
+                  },
+                  {
+                    "home": 5,
+                    "away": 7
+                  }
                 ]
               }
             },
@@ -708,16 +859,24 @@
                 "status": "played",
                 "winner": "home",
                 "sets": [
-                  { "home": 6, "away": 2 },
-                  { "home": 4, "away": 6 },
-                  { "home": 10, "away": 7 }
+                  {
+                    "home": 6,
+                    "away": 2
+                  },
+                  {
+                    "home": 4,
+                    "away": 6
+                  },
+                  {
+                    "home": 7,
+                    "away": 5
+                  }
                 ]
               }
             },
             {
               "id": "mix-onyx-004",
               "round": 2,
-              "date": "2025-10-16",
               "arena": "Padel Story",
               "home": "violet-blend",
               "away": "duo-energy",
@@ -728,7 +887,6 @@
             {
               "id": "mix-onyx-005",
               "round": 3,
-              "date": "2025-10-24",
               "arena": "ERA Padel Club",
               "home": "duo-energy",
               "away": "northwave-mix",
