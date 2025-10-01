@@ -1,0 +1,6 @@
+id: mix
+title: Mix
+description: Смешанные пары и кросс-клубные дуэты.
+groups:
+- id: mix-onyx
+  file: groups/edinstvo.yml

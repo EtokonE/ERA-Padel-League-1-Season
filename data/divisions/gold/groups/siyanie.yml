@@ -1,0 +1,101 @@
+id: gold-alpha
+label: Группа Сияние
+teams:
+- id: Алексей Сорокин - Глеб Антонов
+  name: Алексей Сорокин - Глеб Антонов
+  players:
+  - Алексей Сорокин
+  - Глеб Антонов
+- id: Илья Романов - Сергей Белый
+  name: Илья Романов - Сергей Белый
+  players:
+  - Илья Романов
+  - Сергей Белый
+- id: Роман Щербаков - Дмитрий Литвиненко
+  name: Роман Щербаков - Дмитрий Литвиненко
+  players:
+  - Роман Щербаков
+  - Дмитрий Литвиненко
+- id: Егор Пластов - Иван Гущин
+  name: Егор Пластов - Иван Гущин
+  players:
+  - Егор Пластов
+  - Иван Гущин
+matches:
+- id: gold-alpha-001
+  round: 1
+  date: '2025-10-05'
+  home: Алексей Сорокин - Глеб Антонов
+  away: Илья Романов - Сергей Белый
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 6
+      away: 4
+    - home: 6
+      away: 3
+- id: gold-alpha-002
+  round: 1
+  date: '2025-10-06'
+  home: Роман Щербаков - Дмитрий Литвиненко
+  away: Егор Пластов - Иван Гущин
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 4
+      away: 6
+    - home: 6
+      away: 3
+    - home: 7
+      away: 5
+- id: gold-alpha-003
+  round: 2
+  date: '2025-10-12'
+  home: Алексей Сорокин - Глеб Антонов
+  away: Роман Щербаков - Дмитрий Литвиненко
+  result:
+    status: played
+    winner: away
+    sets:
+    - home: 6
+      away: 2
+    - home: 3
+      away: 6
+    - home: 6
+      away: 7
+- id: gold-alpha-004
+  round: 2
+  date: '2025-10-13'
+  home: Илья Романов - Сергей Белый
+  away: Егор Пластов - Иван Гущин
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 7
+      away: 5
+    - home: 6
+      away: 2
+- id: gold-alpha-005
+  round: 3
+  home: Алексей Сорокин - Глеб Антонов
+  away: Егор Пластов - Иван Гущин
+  result:
+    status: scheduled
+- id: gold-alpha-006
+  round: 3
+  date: '2025-10-21'
+  home: Илья Романов - Сергей Белый
+  away: Роман Щербаков - Дмитрий Литвиненко
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 5
+      away: 7
+    - home: 6
+      away: 4
+    - home: 7
+      away: 5

@@ -1,0 +1,6 @@
+id: ladies
+title: Ladies
+description: ERA Ladies League — интенсивные матчи микс-уровня.
+groups:
+- id: ladies-emerald
+  file: groups/izumrud.yml

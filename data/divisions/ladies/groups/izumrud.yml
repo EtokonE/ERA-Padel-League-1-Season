@@ -1,0 +1,101 @@
+id: ladies-emerald
+label: Группа Изумруд
+teams:
+- id: Алина Горчакова - Мария Серова
+  name: Алина Горчакова - Мария Серова
+  players:
+  - Алина Горчакова
+  - Мария Серова
+- id: Полина Данилова - Софья Никитина
+  name: Полина Данилова - Софья Никитина
+  players:
+  - Полина Данилова
+  - Софья Никитина
+- id: Надя Абрамова - Анна Филонова
+  name: Надя Абрамова - Анна Филонова
+  players:
+  - Надя Абрамова
+  - Анна Филонова
+- id: Юлия Берсенева - Элина Власова
+  name: Юлия Берсенева - Элина Власова
+  players:
+  - Юлия Берсенева
+  - Элина Власова
+matches:
+- id: ladies-emerald-001
+  round: 1
+  date: '2025-10-08'
+  home: Алина Горчакова - Мария Серова
+  away: Полина Данилова - Софья Никитина
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 6
+      away: 3
+    - home: 6
+      away: 4
+- id: ladies-emerald-002
+  round: 1
+  date: '2025-10-09'
+  home: Надя Абрамова - Анна Филонова
+  away: Юлия Берсенева - Элина Власова
+  result:
+    status: played
+    winner: away
+    sets:
+    - home: 3
+      away: 6
+    - home: 6
+      away: 4
+    - home: 6
+      away: 7
+- id: ladies-emerald-003
+  round: 2
+  date: '2025-10-15'
+  home: Алина Горчакова - Мария Серова
+  away: Надя Абрамова - Анна Филонова
+  result:
+    status: played
+    winner: away
+    sets:
+    - home: 6
+      away: 4
+    - home: 3
+      away: 6
+    - home: 5
+      away: 7
+- id: ladies-emerald-004
+  round: 2
+  date: '2025-10-16'
+  home: Полина Данилова - Софья Никитина
+  away: Юлия Берсенева - Элина Власова
+  result:
+    status: played
+    winner: away
+    sets:
+    - home: 4
+      away: 6
+    - home: 3
+      away: 6
+- id: ladies-emerald-005
+  round: 3
+  home: Полина Данилова - Софья Никитина
+  away: Надя Абрамова - Анна Филонова
+  result:
+    status: scheduled
+- id: ladies-emerald-006
+  round: 3
+  date: '2025-10-24'
+  home: Алина Горчакова - Мария Серова
+  away: Юлия Берсенева - Элина Власова
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 7
+      away: 5
+    - home: 4
+      away: 6
+    - home: 6
+      away: 4

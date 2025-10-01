@@ -1,0 +1,8 @@
+id: silver
+title: Silver
+description: 'Команды уровня Silver: динамичные матчи и напряжённые концовки.'
+groups:
+- id: silver-delta
+  file: groups/pereliv.yml
+- id: silver-sierra
+  file: groups/veter.yml
