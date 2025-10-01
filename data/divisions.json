@@ -230,48 +230,43 @@
           "matches": [
             {
               "id": "gold-beta-001",
-              "round": 1,
-              "date": "2025-10-07",
               "home": "Андрей Нестеров - Владимир Сапсанов",
               "away": "Георгий Харитонов - Павел Арбузов",
+              "date": "2025-10-01",
               "result": {
-                "status": "wo",
-                "winner": "home",
-                "reason": "Техническая победа: соперник не явился"
+                "status": "scheduled"
               }
             },
             {
               "id": "gold-beta-002",
-              "round": 2,
-              "date": "2025-10-14",
               "home": "Георгий Харитонов - Павел Арбузов",
               "away": "Кирилл Ефимов - Степан Руднев",
               "result": {
-                "status": "played",
-                "winner": "away",
-                "sets": [
-                  {
-                    "home": 7,
-                    "away": 5
-                  },
-                  {
-                    "home": 4,
-                    "away": 6
-                  },
-                  {
-                    "home": 5,
-                    "away": 7
-                  }
-                ]
+                "status": "scheduled"
               }
             },
             {
               "id": "gold-beta-003",
+              "home": "Андрей Нестеров - Владимир Сапсанов",
+              "away": "Кирилл Ефимов - Степан Руднев",
               "round": 3,
-              "home": "Кирилл Ефимов - Степан Руднев",
-              "away": "Андрей Нестеров - Владимир Сапсанов",
               "result": {
-                "status": "scheduled"
+                "status": "played",
+                "winner": "home",
+                "sets": [
+                  {
+                    "home": 6,
+                    "away": 2
+                  },
+                  {
+                    "home": 2,
+                    "away": 6
+                  },
+                  {
+                    "home": 7,
+                    "away": 6
+                  }
+                ]
               }
             }
           ]

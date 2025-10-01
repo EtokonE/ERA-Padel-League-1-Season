@@ -15,6 +15,7 @@
 - `index.html` — каркас страницы и контейнеры для динамического контента.
 - `styles/main.css` — оформление и адаптивные стили.
 - `scripts/main.js` — загрузка данных, расчёт таблиц, рендер истории матчей.
+- `scripts/manage_matches.py` — утилита для пересборки, обновления и создания матчей.
 - `data/season.yml` — метаданные сезона (название, подпись, штамп обновления, примечания).
 - `data/rules.yml` — очки, рейтинговые коэффициенты и критерии тай-брейка.
 - `data/divisions/<id>/division.yml` — описание дивизиона и ссылки на файлы групп.
@@ -73,15 +74,18 @@ matches:
 ### Полезные скрипты
 
 - `python scripts/build_data.py` — собирает все YAML-файлы в `data/divisions.json`. Скрипт автоматически сортирует дивизионы в порядке Gold → Silver → Ladies → Mix.
-- `python scripts/update_match.py --division gold --group gold-alpha --match gold-alpha-006 --status played --winner home --sets 6-4,3-6,7-5` — обновляет матч и сразу пересобирает `divisions.json` (флаг `--no-build` отключает пересборку).
+- `python scripts/manage_matches.py` — быстрый способ пересобрать `data/divisions.json` из YAML без лишних флагов.
+- `python scripts/manage_matches.py --interactive` — пошаговый режим: выбираете дивизион → группу, затем обновляете существующий матч или добавляете новый.
+- `python scripts/manage_matches.py --create --division gold --group gold-alpha --match gold-alpha-010 --home "Алексей" --away "Илья" --round 4 --status scheduled` — пример создания матча из терминала.
+- `python scripts/manage_matches.py --division gold --group gold-alpha --match gold-alpha-006 --status played --winner home --sets 6-4,3-6,7-5` — точечное обновление через аргументы командной строки (флаг `--no-build` сохраняет изменения без пересборки JSON).
 
-Скрипт `update_match.py` понимает параметры `--date`, `--round`, `--reason`, `--clear-sets` и `--winner`. Пустая строка в `--date` или `--reason` удаляет поле. Для технических результатов используйте `--status wo --winner home --reason "Техническая победа"`.
+В ручном режиме скрипт `manage_matches.py` принимает параметры `--date`, `--round`, `--reason`, `--clear-sets`, `--winner`, а для создания матчей — также `--home` и `--away`. Пустая строка в `--date` или `--reason` удаляет поле. Для технических результатов используйте `--status wo --winner home --reason "Техническая победа"`.
 
 ## Как обновлять турнир
 
 1. Обновите `data/season.yml` (например, `updatedAt`) и/или соответствующий файл группы в `data/divisions/<id>/groups/`.
-2. Для редактирования матчей можно воспользоваться утилитой `scripts/update_match.py`, либо внести изменения вручную в YAML.
-3. Запустите `python scripts/build_data.py`, чтобы пересобрать `data/divisions.json` (утилита для обновления матчей делает это автоматически, если не передан `--no-build`).
+2. Для редактирования или планирования матчей можно воспользоваться утилитой `scripts/manage_matches.py`, либо внести изменения вручную в YAML.
+3. Запустите `python scripts/manage_matches.py` (или `python scripts/build_data.py`), чтобы пересобрать `data/divisions.json`. Диалоговый режим и прямые аргументы пересобирают файл автоматически, если не передан `--no-build`.
 4. Перезагрузите страницу — таблицы, очки, разница сетов и рейтинг пересчитаются автоматически.
 
 > Названия команд по-прежнему формируются из имён и фамилий игроков, соединённых тире (`Имя Фамилия - Имя Фамилия`). Дополнительные поля (например, `club`, `note`) можно добавлять свободно — рендер поддерживает незнакомые поля.
