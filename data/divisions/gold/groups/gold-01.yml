@@ -21,4 +21,51 @@ teams:
   players:
   - Артур Геворгов
   - Виолетта Хисамова
-matches: []
+matches:
+- id: gold-01-001
+  round: 1
+  date: '2025-11-01'
+  home: Максим Калинин - Степан Осипов
+  away: Сергей Уханов - Денис Гаджиев
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 6
+      away: 4
+    - home: 6
+      away: 3
+- id: gold-01-002
+  round: 1
+  date: '2025-11-03'
+  home: Артем Погодин - Александр Муллин
+  away: Артур Геворгов - Виолетта Хисамова
+  result:
+    status: played
+    winner: away
+    sets:
+    - home: 4
+      away: 6
+    - home: 5
+      away: 7
+- id: gold-01-003
+  round: 2
+  home: Максим Калинин - Степан Осипов
+  away: Артем Погодин - Александр Муллин
+  result:
+    status: scheduled
+- id: gold-01-004
+  round: 2
+  date: '2025-11-10'
+  home: Сергей Уханов - Денис Гаджиев
+  away: Артур Геворгов - Виолетта Хисамова
+  result:
+    status: played
+    winner: away
+    sets:
+    - home: 3
+      away: 6
+    - home: 6
+      away: 4
+    - home: 4
+      away: 6

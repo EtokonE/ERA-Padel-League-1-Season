@@ -20,4 +20,44 @@ teams:
   name: Павел Туманов
   players:
   - Павел Туманов
-matches: []
+matches:
+- id: silver-01-001
+  round: 1
+  date: '2025-11-05'
+  home: Стас Зотов - Алексей Федоров
+  away: Тимур Чарыев - Артем Логинов
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 6
+      away: 4
+    - home: 7
+      away: 5
+- id: silver-01-002
+  round: 1
+  home: Артем Михайлов - Дмитрий Горохов
+  away: Павел Туманов
+  result:
+    status: scheduled
+- id: silver-01-003
+  round: 2
+  date: '2025-11-10'
+  home: Стас Зотов - Алексей Федоров
+  away: Артем Михайлов - Дмитрий Горохов
+  result:
+    status: played
+    winner: away
+    sets:
+    - home: 3
+      away: 6
+    - home: 6
+      away: 4
+    - home: 5
+      away: 7
+- id: silver-01-004
+  round: 2
+  home: Тимур Чарыев - Артем Логинов
+  away: Павел Туманов
+  result:
+    status: scheduled

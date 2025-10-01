@@ -26,4 +26,44 @@ teams:
   players:
   - Степан Осипов
   - Маргарита Провоторова
-matches: []
+matches:
+- id: mix-01-001
+  round: 1
+  date: '2025-11-04'
+  home: Максим Калинин - Кокоркина Кристина
+  away: Александр Воронин - Надежда Шипова
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 6
+      away: 3
+    - home: 6
+      away: 4
+- id: mix-01-002
+  round: 1
+  home: Алёна Томышева - Максим Бурилло
+  away: Алексей Федоров - Екатерина Фёдорова
+  result:
+    status: scheduled
+- id: mix-01-003
+  round: 2
+  date: '2025-11-11'
+  home: Степан Осипов - Маргарита Провоторова
+  away: Александр Воронин - Надежда Шипова
+  result:
+    status: played
+    winner: away
+    sets:
+    - home: 7
+      away: 6
+    - home: 2
+      away: 6
+    - home: 4
+      away: 6
+- id: mix-01-004
+  round: 2
+  home: Максим Калинин - Кокоркина Кристина
+  away: Алёна Томышева - Максим Бурилло
+  result:
+    status: scheduled

@@ -30,4 +30,55 @@ teams:
   players:
   - Тимофей Шипунов
   - Даниил Мартовой
-matches: []
+matches:
+- id: silver-03-001
+  round: 1
+  date: '2025-11-07'
+  home: Максим Прохоров - Иван Красовский
+  away: Рита Сизова - Дмитрий Комаров
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 6
+      away: 3
+    - home: 6
+      away: 4
+- id: silver-03-002
+  round: 1
+  date: '2025-11-08'
+  home: Гурген Харатян - Леонид Бухтеев
+  away: Роман Самохвалов
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 6
+      away: 1
+    - home: 6
+      away: 2
+- id: silver-03-003
+  round: 1
+  home: Даниил Лебедев - Всеволод Сальников
+  away: Тимофей Шипунов - Даниил Мартовой
+  result:
+    status: scheduled
+- id: silver-03-004
+  round: 2
+  home: Рита Сизова - Дмитрий Комаров
+  away: Гурген Харатян - Леонид Бухтеев
+  result:
+    status: scheduled
+- id: silver-03-005
+  round: 2
+  date: '2025-11-15'
+  home: Максим Прохоров - Иван Красовский
+  away: Даниил Лебедев - Всеволод Сальников
+  result:
+    status: played
+    winner: away
+    sets:
+    - home: 5
+      away: 7
+    - home: 4
+      away: 6
