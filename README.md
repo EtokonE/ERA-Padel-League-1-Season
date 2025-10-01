@@ -37,12 +37,12 @@
 ```yaml
 id: gold
 title: Gold
-description: Команды уровня Gold, разделённые на когорты «Сияние» и «Импульс».
+description: Команды уровня Gold, разделённые на подгруппы 1 и 2.
 groups:
   - id: gold-01
-    file: groups/siyanie.yml
+    file: groups/gold-01.yml
   - id: gold-02
-    file: groups/impuls.yml
+    file: groups/gold-02.yml
 ```
 
 ### Пример файла группы

@@ -3,4 +3,4 @@ title: Mix
 description: Смешанные пары и кросс-клубные дуэты.
 groups:
 - id: mix-01
-  file: groups/edinstvo.yml
+  file: groups/mix-01.yml
