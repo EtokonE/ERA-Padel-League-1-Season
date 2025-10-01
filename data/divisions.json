@@ -37,40 +37,36 @@
           "label": "Группа Alpha",
           "teams": [
             {
-              "id": "northern-lights",
+              "id": "Алексей Сорокин - Глеб Антонов",
               "name": "Алексей Сорокин - Глеб Антонов",
               "players": [
                 "Алексей Сорокин",
                 "Глеб Антонов"
-              ],
-              "club": "ERA Padel"
+              ]
             },
             {
-              "id": "padel-brothers",
+              "id": "Илья Романов - Сергей Белый",
               "name": "Илья Романов - Сергей Белый",
               "players": [
                 "Илья Романов",
                 "Сергей Белый"
-              ],
-              "club": "Padel Story"
+              ]
             },
             {
-              "id": "team-ignite",
+              "id": "Роман Щербаков - Дмитрий Литвиненко",
               "name": "Роман Щербаков - Дмитрий Литвиненко",
               "players": [
                 "Роман Щербаков",
                 "Дмитрий Литвиненко"
-              ],
-              "club": "ERA Padel"
+              ]
             },
             {
-              "id": "serve-volley",
+              "id": "Егор Пластов - Иван Гущин",
               "name": "Егор Пластов - Иван Гущин",
               "players": [
                 "Егор Пластов",
                 "Иван Гущин"
-              ],
-              "club": "Padel Story"
+              ]
             }
           ],
           "matches": [
@@ -78,9 +74,8 @@
               "id": "gold-alpha-001",
               "round": 1,
               "date": "2025-10-05",
-              "arena": "ERA Padel Club",
-              "home": "northern-lights",
-              "away": "padel-brothers",
+              "home": "Алексей Сорокин - Глеб Антонов",
+              "away": "Илья Романов - Сергей Белый",
               "result": {
                 "status": "played",
                 "winner": "home",
@@ -100,9 +95,8 @@
               "id": "gold-alpha-002",
               "round": 1,
               "date": "2025-10-06",
-              "arena": "Padel Story",
-              "home": "team-ignite",
-              "away": "serve-volley",
+              "home": "Роман Щербаков - Дмитрий Литвиненко",
+              "away": "Егор Пластов - Иван Гущин",
               "result": {
                 "status": "played",
                 "winner": "home",
@@ -126,9 +120,8 @@
               "id": "gold-alpha-003",
               "round": 2,
               "date": "2025-10-12",
-              "arena": "ERA Padel Club",
-              "home": "northern-lights",
-              "away": "team-ignite",
+              "home": "Алексей Сорокин - Глеб Антонов",
+              "away": "Роман Щербаков - Дмитрий Литвиненко",
               "result": {
                 "status": "played",
                 "winner": "away",
@@ -152,9 +145,8 @@
               "id": "gold-alpha-004",
               "round": 2,
               "date": "2025-10-13",
-              "arena": "Padel Story",
-              "home": "padel-brothers",
-              "away": "serve-volley",
+              "home": "Илья Романов - Сергей Белый",
+              "away": "Егор Пластов - Иван Гущин",
               "result": {
                 "status": "played",
                 "winner": "home",
@@ -173,9 +165,8 @@
             {
               "id": "gold-alpha-005",
               "round": 3,
-              "arena": "ERA Padel Club",
-              "home": "northern-lights",
-              "away": "serve-volley",
+              "home": "Алексей Сорокин - Глеб Антонов",
+              "away": "Егор Пластов - Иван Гущин",
               "result": {
                 "status": "scheduled"
               }
@@ -184,9 +175,8 @@
               "id": "gold-alpha-006",
               "round": 3,
               "date": "2025-10-21",
-              "arena": "Padel Story",
-              "home": "padel-brothers",
-              "away": "team-ignite",
+              "home": "Илья Романов - Сергей Белый",
+              "away": "Роман Щербаков - Дмитрий Литвиненко",
               "result": {
                 "status": "played",
                 "winner": "home",
@@ -213,31 +203,28 @@
           "label": "Группа Beta",
           "teams": [
             {
-              "id": "skyline",
+              "id": "Андрей Нестеров - Владимир Сапсанов",
               "name": "Андрей Нестеров - Владимир Сапсанов",
               "players": [
                 "Андрей Нестеров",
                 "Владимир Сапсанов"
-              ],
-              "club": "ERA Padel"
+              ]
             },
             {
-              "id": "drop-shots",
+              "id": "Георгий Харитонов - Павел Арбузов",
               "name": "Георгий Харитонов - Павел Арбузов",
               "players": [
                 "Георгий Харитонов",
                 "Павел Арбузов"
-              ],
-              "club": "Padel Story"
+              ]
             },
             {
-              "id": "backhand-band",
+              "id": "Кирилл Ефимов - Степан Руднев",
               "name": "Кирилл Ефимов - Степан Руднев",
               "players": [
                 "Кирилл Ефимов",
                 "Степан Руднев"
-              ],
-              "club": "ERA Padel"
+              ]
             }
           ],
           "matches": [
@@ -245,9 +232,8 @@
               "id": "gold-beta-001",
               "round": 1,
               "date": "2025-10-07",
-              "arena": "ERA Padel Club",
-              "home": "skyline",
-              "away": "drop-shots",
+              "home": "Андрей Нестеров - Владимир Сапсанов",
+              "away": "Георгий Харитонов - Павел Арбузов",
               "result": {
                 "status": "wo",
                 "winner": "home",
@@ -258,9 +244,8 @@
               "id": "gold-beta-002",
               "round": 2,
               "date": "2025-10-14",
-              "arena": "Padel Story",
-              "home": "drop-shots",
-              "away": "backhand-band",
+              "home": "Георгий Харитонов - Павел Арбузов",
+              "away": "Кирилл Ефимов - Степан Руднев",
               "result": {
                 "status": "played",
                 "winner": "away",
@@ -283,9 +268,8 @@
             {
               "id": "gold-beta-003",
               "round": 3,
-              "arena": "ERA Padel Club",
-              "home": "backhand-band",
-              "away": "skyline",
+              "home": "Кирилл Ефимов - Степан Руднев",
+              "away": "Андрей Нестеров - Владимир Сапсанов",
               "result": {
                 "status": "scheduled"
               }
@@ -304,40 +288,36 @@
           "label": "Группа Delta",
           "teams": [
             {
-              "id": "polar-aces",
+              "id": "Игорь Надеждин - Владимир Коренев",
               "name": "Игорь Надеждин - Владимир Коренев",
               "players": [
                 "Игорь Надеждин",
                 "Владимир Коренев"
-              ],
-              "club": "ERA Padel"
+              ]
             },
             {
-              "id": "smash-factor",
+              "id": "Артём Карпов - Сергей Мартынов",
               "name": "Артём Карпов - Сергей Мартынов",
               "players": [
                 "Артём Карпов",
                 "Сергей Мартынов"
-              ],
-              "club": "Padel Story"
+              ]
             },
             {
-              "id": "spin-doctors",
+              "id": "Даниил Журавлёв - Иван Осокин",
               "name": "Даниил Журавлёв - Иван Осокин",
               "players": [
                 "Даниил Журавлёв",
                 "Иван Осокин"
-              ],
-              "club": "ERA Padel"
+              ]
             },
             {
-              "id": "court-rangers",
+              "id": "Никита Жаров - Виталий Копылов",
               "name": "Никита Жаров - Виталий Копылов",
               "players": [
                 "Никита Жаров",
                 "Виталий Копылов"
-              ],
-              "club": "Padel Story"
+              ]
             }
           ],
           "matches": [
@@ -345,9 +325,8 @@
               "id": "silver-delta-001",
               "round": 1,
               "date": "2025-10-05",
-              "arena": "ERA Padel Club",
-              "home": "polar-aces",
-              "away": "smash-factor",
+              "home": "Игорь Надеждин - Владимир Коренев",
+              "away": "Артём Карпов - Сергей Мартынов",
               "result": {
                 "status": "played",
                 "winner": "home",
@@ -371,9 +350,8 @@
               "id": "silver-delta-002",
               "round": 1,
               "date": "2025-10-06",
-              "arena": "Padel Story",
-              "home": "spin-doctors",
-              "away": "court-rangers",
+              "home": "Даниил Журавлёв - Иван Осокин",
+              "away": "Никита Жаров - Виталий Копылов",
               "result": {
                 "status": "played",
                 "winner": "away",
@@ -393,9 +371,8 @@
               "id": "silver-delta-003",
               "round": 2,
               "date": "2025-10-12",
-              "arena": "ERA Padel Club",
-              "home": "polar-aces",
-              "away": "spin-doctors",
+              "home": "Игорь Надеждин - Владимир Коренев",
+              "away": "Даниил Журавлёв - Иван Осокин",
               "result": {
                 "status": "played",
                 "winner": "away",
@@ -419,9 +396,8 @@
               "id": "silver-delta-004",
               "round": 2,
               "date": "2025-10-13",
-              "arena": "Padel Story",
-              "home": "smash-factor",
-              "away": "court-rangers",
+              "home": "Артём Карпов - Сергей Мартынов",
+              "away": "Никита Жаров - Виталий Копылов",
               "result": {
                 "status": "played",
                 "winner": "home",
@@ -440,9 +416,8 @@
             {
               "id": "silver-delta-005",
               "round": 3,
-              "arena": "ERA Padel Club",
-              "home": "court-rangers",
-              "away": "polar-aces",
+              "home": "Никита Жаров - Виталий Копылов",
+              "away": "Игорь Надеждин - Владимир Коренев",
               "result": {
                 "status": "scheduled"
               }
@@ -451,9 +426,8 @@
               "id": "silver-delta-006",
               "round": 3,
               "date": "2025-10-21",
-              "arena": "Padel Story",
-              "home": "smash-factor",
-              "away": "spin-doctors",
+              "home": "Артём Карпов - Сергей Мартынов",
+              "away": "Даниил Журавлёв - Иван Осокин",
               "result": {
                 "status": "played",
                 "winner": "away",
@@ -480,31 +454,28 @@
           "label": "Группа Sierra",
           "teams": [
             {
-              "id": "drop-crew",
+              "id": "Матвей Норкин - Савелий Полозов",
               "name": "Матвей Норкин - Савелий Полозов",
               "players": [
                 "Матвей Норкин",
                 "Савелий Полозов"
-              ],
-              "club": "ERA Padel"
+              ]
             },
             {
-              "id": "baseline-rush",
+              "id": "Олег Чернов - Антон Белозёров",
               "name": "Олег Чернов - Антон Белозёров",
               "players": [
                 "Олег Чернов",
                 "Антон Белозёров"
-              ],
-              "club": "Padel Story"
+              ]
             },
             {
-              "id": "evening-spin",
+              "id": "Дмитрий Харламов - Фёдор Курбатов",
               "name": "Дмитрий Харламов - Фёдор Курбатов",
               "players": [
                 "Дмитрий Харламов",
                 "Фёдор Курбатов"
-              ],
-              "club": "ERA Padel"
+              ]
             }
           ],
           "matches": [
@@ -512,9 +483,8 @@
               "id": "silver-sierra-001",
               "round": 1,
               "date": "2025-10-08",
-              "arena": "ERA Padel Club",
-              "home": "drop-crew",
-              "away": "baseline-rush",
+              "home": "Матвей Норкин - Савелий Полозов",
+              "away": "Олег Чернов - Антон Белозёров",
               "result": {
                 "status": "played",
                 "winner": "away",
@@ -534,9 +504,8 @@
               "id": "silver-sierra-002",
               "round": 2,
               "date": "2025-10-15",
-              "arena": "Padel Story",
-              "home": "baseline-rush",
-              "away": "evening-spin",
+              "home": "Олег Чернов - Антон Белозёров",
+              "away": "Дмитрий Харламов - Фёдор Курбатов",
               "result": {
                 "status": "played",
                 "winner": "home",
@@ -559,9 +528,8 @@
             {
               "id": "silver-sierra-003",
               "round": 3,
-              "arena": "ERA Padel Club",
-              "home": "evening-spin",
-              "away": "drop-crew",
+              "home": "Дмитрий Харламов - Фёдор Курбатов",
+              "away": "Матвей Норкин - Савелий Полозов",
               "result": {
                 "status": "scheduled"
               }
@@ -580,40 +548,36 @@
           "label": "Группа Emerald",
           "teams": [
             {
-              "id": "lace-lobsters",
+              "id": "Алина Горчакова - Мария Серова",
               "name": "Алина Горчакова - Мария Серова",
               "players": [
                 "Алина Горчакова",
                 "Мария Серова"
-              ],
-              "club": "ERA Padel"
+              ]
             },
             {
-              "id": "mint-doubles",
+              "id": "Полина Данилова - Софья Никитина",
               "name": "Полина Данилова - Софья Никитина",
               "players": [
                 "Полина Данилова",
                 "Софья Никитина"
-              ],
-              "club": "Padel Story"
+              ]
             },
             {
-              "id": "moon-courts",
+              "id": "Надя Абрамова - Анна Филонова",
               "name": "Надя Абрамова - Анна Филонова",
               "players": [
                 "Надя Абрамова",
                 "Анна Филонова"
-              ],
-              "club": "ERA Padel"
+              ]
             },
             {
-              "id": "baseline-queens",
+              "id": "Юлия Берсенева - Элина Власова",
               "name": "Юлия Берсенева - Элина Власова",
               "players": [
                 "Юлия Берсенева",
                 "Элина Власова"
-              ],
-              "club": "ERA Padel"
+              ]
             }
           ],
           "matches": [
@@ -621,9 +585,8 @@
               "id": "ladies-emerald-001",
               "round": 1,
               "date": "2025-10-08",
-              "arena": "ERA Padel Club",
-              "home": "lace-lobsters",
-              "away": "mint-doubles",
+              "home": "Алина Горчакова - Мария Серова",
+              "away": "Полина Данилова - Софья Никитина",
               "result": {
                 "status": "played",
                 "winner": "home",
@@ -643,9 +606,8 @@
               "id": "ladies-emerald-002",
               "round": 1,
               "date": "2025-10-09",
-              "arena": "Padel Story",
-              "home": "moon-courts",
-              "away": "baseline-queens",
+              "home": "Надя Абрамова - Анна Филонова",
+              "away": "Юлия Берсенева - Элина Власова",
               "result": {
                 "status": "played",
                 "winner": "away",
@@ -669,9 +631,8 @@
               "id": "ladies-emerald-003",
               "round": 2,
               "date": "2025-10-15",
-              "arena": "ERA Padel Club",
-              "home": "lace-lobsters",
-              "away": "moon-courts",
+              "home": "Алина Горчакова - Мария Серова",
+              "away": "Надя Абрамова - Анна Филонова",
               "result": {
                 "status": "played",
                 "winner": "away",
@@ -695,9 +656,8 @@
               "id": "ladies-emerald-004",
               "round": 2,
               "date": "2025-10-16",
-              "arena": "Padel Story",
-              "home": "mint-doubles",
-              "away": "baseline-queens",
+              "home": "Полина Данилова - Софья Никитина",
+              "away": "Юлия Берсенева - Элина Власова",
               "result": {
                 "status": "played",
                 "winner": "away",
@@ -716,9 +676,8 @@
             {
               "id": "ladies-emerald-005",
               "round": 3,
-              "arena": "ERA Padel Club",
-              "home": "mint-doubles",
-              "away": "moon-courts",
+              "home": "Полина Данилова - Софья Никитина",
+              "away": "Надя Абрамова - Анна Филонова",
               "result": {
                 "status": "scheduled"
               }
@@ -727,9 +686,8 @@
               "id": "ladies-emerald-006",
               "round": 3,
               "date": "2025-10-24",
-              "arena": "Padel Story",
-              "home": "lace-lobsters",
-              "away": "baseline-queens",
+              "home": "Алина Горчакова - Мария Серова",
+              "away": "Юлия Берсенева - Элина Власова",
               "result": {
                 "status": "played",
                 "winner": "home",
@@ -763,40 +721,36 @@
           "label": "Группа Onyx",
           "teams": [
             {
-              "id": "northwave-mix",
+              "id": "Максим Калинин - Кокоркина Кристина",
               "name": "Максим Калинин - Кокоркина Кристина",
               "players": [
                 "Максим Калинин",
                 "Кокоркина Кристина"
-              ],
-              "club": "ERA Padel"
+              ]
             },
             {
-              "id": "violet-blend",
+              "id": "Степан Осипов - Маргарита Провоторова",
               "name": "Степан Осипов - Маргарита Провоторова",
               "players": [
                 "Степан Осипов",
                 "Маргарита Провоторова"
-              ],
-              "club": "Padel Story"
+              ]
             },
             {
-              "id": "padel-alliance",
+              "id": "Александр Воронин - Надежда Шипова",
               "name": "Александр Воронин - Надежда Шипова",
               "players": [
                 "Александр Воронин",
                 "Надежда Шипова"
-              ],
-              "club": "ERA Padel"
+              ]
             },
             {
-              "id": "duo-energy",
+              "id": "Максим Бурилло - Алёна Томышева",
               "name": "Максим Бурилло - Алёна Томышева",
               "players": [
                 "Максим Бурилло",
                 "Алёна Томышева"
-              ],
-              "club": "ERA Padel"
+              ]
             }
           ],
           "matches": [
@@ -804,9 +758,8 @@
               "id": "mix-onyx-001",
               "round": 1,
               "date": "2025-10-10",
-              "arena": "ERA Padel Club",
-              "home": "northwave-mix",
-              "away": "violet-blend",
+              "home": "Максим Калинин - Кокоркина Кристина",
+              "away": "Степан Осипов - Маргарита Провоторова",
               "result": {
                 "status": "played",
                 "winner": "home",
@@ -826,9 +779,8 @@
               "id": "mix-onyx-002",
               "round": 1,
               "date": "2025-10-11",
-              "arena": "Padel Story",
-              "home": "padel-alliance",
-              "away": "duo-energy",
+              "home": "Александр Воронин - Надежда Шипова",
+              "away": "Максим Бурилло - Алёна Томышева",
               "result": {
                 "status": "played",
                 "winner": "away",
@@ -852,9 +804,8 @@
               "id": "mix-onyx-003",
               "round": 2,
               "date": "2025-10-17",
-              "arena": "ERA Padel Club",
-              "home": "northwave-mix",
-              "away": "padel-alliance",
+              "home": "Максим Калинин - Кокоркина Кристина",
+              "away": "Александр Воронин - Надежда Шипова",
               "result": {
                 "status": "played",
                 "winner": "home",
@@ -877,9 +828,8 @@
             {
               "id": "mix-onyx-004",
               "round": 2,
-              "arena": "Padel Story",
-              "home": "violet-blend",
-              "away": "duo-energy",
+              "home": "Степан Осипов - Маргарита Провоторова",
+              "away": "Максим Бурилло - Алёна Томышева",
               "result": {
                 "status": "scheduled"
               }
@@ -887,9 +837,8 @@
             {
               "id": "mix-onyx-005",
               "round": 3,
-              "arena": "ERA Padel Club",
-              "home": "duo-energy",
-              "away": "northwave-mix",
+              "home": "Максим Бурилло - Алёна Томышева",
+              "away": "Максим Калинин - Кокоркина Кристина",
               "result": {
                 "status": "scheduled"
               }
