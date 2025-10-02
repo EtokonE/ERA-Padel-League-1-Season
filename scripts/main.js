@@ -178,17 +178,17 @@
 
     const cards = [
       {
-        label: 'Дивизионы',
+        label: 'Дивизионы:',
         value: fmtNumber(summary.divisionsCount),
-        meta: `Групп: ${fmtNumber(summary.groupsCount)}`
+        meta: `Подгрупы: ${fmtNumber(summary.groupsCount)}`
       },
       {
-        label: 'Команды',
+        label: 'Команды:',
         value: fmtNumber(summary.teamsCount),
-        meta: `Запланировано матчей: ${fmtNumber(summary.matchesTotal)}`
+        meta: `Всего участников: ${fmtNumber(summary.teamsCount)*2}`
       },
       {
-        label: 'Матчи сыграно',
+        label: 'Матчей сыграно',
         value: fmtNumber(summary.matchesPlayed),
         meta: `В ожидании: ${fmtNumber(summary.matchesScheduled)}`
       }
