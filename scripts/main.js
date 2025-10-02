@@ -903,6 +903,16 @@
     return card;
   };
 
+  const getDivisionDomIds = (division, index) => {
+    const rawId = division && division.id ? String(division.id) : `division-${index + 1}`;
+    const sanitizedId = rawId.replace(/[^A-Za-z0-9_-]+/g, '-');
+    const baseId = sanitizedId.length ? sanitizedId : `division-${index + 1}`;
+    return {
+      tabId: `division-tab-${baseId}`,
+      panelId: `division-panel-${baseId}`
+    };
+  };
+
   const renderDivisionTabs = () => {
     if (!elements.divisionTabs || !state.data) {
       return;
@@ -911,11 +921,14 @@
     elements.divisionTabs.innerHTML = '';
 
     divisions.forEach((division, index) => {
+      const { tabId, panelId } = getDivisionDomIds(division, index);
       const attrs = {
         type: 'button',
         role: 'tab',
         'aria-selected': division.id === state.activeDivisionId ? 'true' : 'false',
-        tabindex: division.id === state.activeDivisionId ? '0' : '-1'
+        tabindex: division.id === state.activeDivisionId ? '0' : '-1',
+        id: tabId,
+        'aria-controls': panelId
       };
       if (division && division.id) {
         attrs['data-division'] = division.id;
@@ -970,6 +983,12 @@
       elements.divisionPanel.appendChild(createEl('p', { textContent: 'Нет данных по дивизионам.' }));
       return;
     }
+
+    const divisionIndex = divisions.indexOf(division);
+    const { tabId, panelId } = getDivisionDomIds(division, divisionIndex === -1 ? 0 : divisionIndex);
+    elements.divisionPanel.setAttribute('role', 'tabpanel');
+    elements.divisionPanel.setAttribute('id', panelId);
+    elements.divisionPanel.setAttribute('aria-labelledby', tabId);
 
     const groups = ensureArray(division.groups);
     if (!groups.length) {
