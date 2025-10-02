@@ -802,21 +802,39 @@
 
       const teamsBlock = createEl('div', { className: 'match-card__teams' });
 
-      const addTeamLine = (teamInfo, label) => {
+      const addTeamLine = (teamInfo, options = {}) => {
+        const { scoreLabel = null, showScore = false } = options;
         const line = createEl('div', { className: 'match-line' });
         const teamCol = createEl('div', { className: 'match-line__team' });
         teamCol.appendChild(createEl('span', { className: 'match-line__team-name', textContent: teamInfo.name }));
-        if (teamInfo.players && teamInfo.players.length) {
-          teamCol.appendChild(createEl('span', { className: 'match-line__team-players', textContent: teamInfo.players.join(' · ') }));
+
+        const players = Array.isArray(teamInfo.players) ? teamInfo.players : [];
+        if (players.length) {
+          const normalize = (value) => value.toLowerCase().replace(/\s+/g, ' ').trim();
+          const nameParts = teamInfo.name
+            ? teamInfo.name.split(/\s*[-–—]\s*/).map((part) => normalize(part)).filter(Boolean)
+            : [];
+          const playerParts = players.map((player) => normalize(player));
+          const isNameFromPlayers = nameParts.length === playerParts.length
+            && nameParts.every((part, index) => part === playerParts[index]);
+
+          if (!isNameFromPlayers) {
+            teamCol.appendChild(createEl('span', { className: 'match-line__team-players', textContent: players.join(' · ') }));
+          }
         }
+
         line.appendChild(teamCol);
-        line.appendChild(createEl('span', { className: 'match-line__score', textContent: label }));
+
+        if (showScore && scoreLabel !== null && scoreLabel !== undefined) {
+          line.appendChild(createEl('span', { className: 'match-line__score', textContent: scoreLabel }));
+        }
+
         return line;
       };
 
       if (match.status === 'scheduled') {
-        teamsBlock.appendChild(addTeamLine(match.home, '—'));
-        teamsBlock.appendChild(addTeamLine(match.away, '—'));
+        teamsBlock.appendChild(addTeamLine(match.home, { scoreLabel: '—', showScore: true }));
+        teamsBlock.appendChild(addTeamLine(match.away));
         card.appendChild(teamsBlock);
         if (match.reason) {
           card.appendChild(createEl('p', { className: 'match-card__status', textContent: match.reason }));
@@ -831,8 +849,8 @@
         const awayLabel = match.status === 'wo'
           ? (match.score.winner === 'away' ? '2:0 (WO)' : '0:2 (WO)')
           : scoreLine;
-        teamsBlock.appendChild(addTeamLine(match.home, homeLabel));
-        teamsBlock.appendChild(addTeamLine(match.away, awayLabel));
+        teamsBlock.appendChild(addTeamLine(match.home, { scoreLabel: homeLabel, showScore: true }));
+        teamsBlock.appendChild(addTeamLine(match.away, { scoreLabel: awayLabel }));
         card.appendChild(teamsBlock);
 
         if (match.score.setScores && match.score.setScores.length) {
