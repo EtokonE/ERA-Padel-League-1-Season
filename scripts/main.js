@@ -880,10 +880,15 @@
     const { standings, matches, totals } = processGroupMatches(group, rules);
     const rankedStandings = rankStandings(standings);
 
-    const card = createEl('article', { className: 'group-card' });
+    const cardOptions = { className: 'group-card' };
+    if (division && division.id) {
+      cardOptions.attrs = { 'data-division': division.id };
+    }
+    const card = createEl('article', cardOptions);
 
     const header = createEl('header', { className: 'group-card__header' });
     header.appendChild(createEl('h3', { className: 'group-card__title', textContent: group.label || 'Группа' }));
+
     const metaParts = [`Сыграно ${totals.matchesCompleted}/${totals.matchesTotal}`];
     const descriptor = division && (division.description || division.title);
     if (descriptor) {
@@ -906,15 +911,20 @@
     elements.divisionTabs.innerHTML = '';
 
     divisions.forEach((division, index) => {
+      const attrs = {
+        type: 'button',
+        role: 'tab',
+        'aria-selected': division.id === state.activeDivisionId ? 'true' : 'false',
+        tabindex: division.id === state.activeDivisionId ? '0' : '-1'
+      };
+      if (division && division.id) {
+        attrs['data-division'] = division.id;
+      }
+
       const button = createEl('button', {
         className: 'tabs__button',
         textContent: division.title || `Дивизион ${index + 1}`,
-        attrs: {
-          type: 'button',
-          role: 'tab',
-          'aria-selected': division.id === state.activeDivisionId ? 'true' : 'false',
-          tabindex: division.id === state.activeDivisionId ? '0' : '-1'
-        }
+        attrs
       });
 
       button.addEventListener('click', () => {

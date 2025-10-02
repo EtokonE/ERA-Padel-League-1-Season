@@ -34,7 +34,7 @@
       "groups": [
         {
           "id": "gold-01",
-          "label": "GOLD 1",
+          "label": "Gold 1",
           "teams": [
             {
               "id": "Максим Калинин - Степан Осипов",
@@ -150,7 +150,7 @@
         },
         {
           "id": "gold-02",
-          "label": "GOLD 2",
+          "label": "Gold 2",
           "teams": [
             {
               "id": "Александр Коромыслов - Егор Круглов",
@@ -289,7 +289,7 @@
       "groups": [
         {
           "id": "silver-01",
-          "label": "SILVER 1",
+          "label": "Silver 1",
           "teams": [
             {
               "id": "Стас Зотов - Алексей Федоров",
@@ -392,7 +392,7 @@
         },
         {
           "id": "silver-02",
-          "label": "SILVER 2",
+          "label": "Silver 2",
           "teams": [
             {
               "id": "Арсений Селиванов",
@@ -497,7 +497,7 @@
         },
         {
           "id": "silver-03",
-          "label": "SILVER 3",
+          "label": "Silver 3",
           "teams": [
             {
               "id": "Максим Прохоров - Иван Красовский",
@@ -640,7 +640,7 @@
       "groups": [
         {
           "id": "ladies-01",
-          "label": "LADIES 1",
+          "label": "Ladies 1",
           "teams": [
             {
               "id": "Серафима Кардакова - Елена Лежнина",
@@ -793,7 +793,7 @@
       "groups": [
         {
           "id": "mix-01",
-          "label": "MIX 1",
+          "label": "Mix 1",
           "teams": [
             {
               "id": "Максим Калинин - Кокоркина Кристина",
