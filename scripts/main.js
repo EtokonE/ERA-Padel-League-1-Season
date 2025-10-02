@@ -180,7 +180,7 @@
       {
         label: 'Дивизионы:',
         value: fmtNumber(summary.divisionsCount),
-        meta: `Подгрупы: ${fmtNumber(summary.groupsCount)}`
+        meta: `Подгруппы: ${fmtNumber(summary.groupsCount)}`
       },
       {
         label: 'Команды:',
