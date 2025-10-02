@@ -1,6 +1,6 @@
 id: gold
 title: Gold
-description: Команды уровня Gold, разделённые на подгруппы 1 и 2.
+description: Команды уровня Gold
 groups:
 - id: gold-01
   file: groups/gold-01.yml

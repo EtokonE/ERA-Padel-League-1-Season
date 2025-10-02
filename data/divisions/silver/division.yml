@@ -1,6 +1,6 @@
 id: silver
 title: Silver
-description: 'Команды уровня Silver: разделённые на подгруппы 1, 2 и 3.'
+description: 'Команды уровня Silver'
 groups:
 - id: silver-01
   file: groups/silver-01.yml

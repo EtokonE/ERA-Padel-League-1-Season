@@ -30,7 +30,7 @@
     {
       "id": "gold",
       "title": "Gold",
-      "description": "Команды уровня Gold, разделённые на подгруппы 1 и 2.",
+      "description": "Команды уровня Gold",
       "groups": [
         {
           "id": "gold-01",
@@ -285,7 +285,7 @@
     {
       "id": "silver",
       "title": "Silver",
-      "description": "Команды уровня Silver: разделённые на подгруппы 1, 2 и 3.",
+      "description": "Команды уровня Silver",
       "groups": [
         {
           "id": "silver-01",

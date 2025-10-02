@@ -14,6 +14,8 @@
   --color-success: #4cd7b9;
   --color-warning: #ffb45b;
   --color-danger: #ff6f91;
+  --gradient-accent-soft: radial-gradient(circle at top right, rgba(140, 123, 255, 0.24), transparent 72%);
+  --gradient-accent-line: linear-gradient(90deg, rgba(140, 123, 255, 0.08), rgba(140, 123, 255, 0.92), rgba(76, 215, 185, 0.18), rgba(76, 215, 185, 0));
   --radius-xs: 8px;
   --radius-sm: 12px;
   --radius-md: 16px;
@@ -67,7 +69,7 @@ a:hover {
 
 .hero {
   position: relative;
-  padding: clamp(56px, 14vw, 120px) 0 clamp(40px, 12vw, 86px);
+  padding: clamp(36px, 9vw, 90px) 0 clamp(40px, 12vw, 86px);
   overflow: hidden;
 }
 
@@ -77,6 +79,7 @@ a:hover {
   inset: 20% -10% -40% -40%;
   background: radial-gradient(circle, rgba(140, 123, 255, 0.25), transparent 55%);
   opacity: 0.6;
+  z-index: 0;
   pointer-events: none;
 }
 
@@ -86,6 +89,7 @@ a:hover {
   gap: 20px;
   text-align: center;
   justify-items: center;
+  z-index: 1;
 }
 
 .hero__tag {
@@ -185,6 +189,38 @@ a:hover {
   box-shadow: var(--shadow-soft);
   display: grid;
   gap: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.summary-card::before {
+  content: '';
+  position: absolute;
+  top: -45%;
+  right: -25%;
+  width: 240px;
+  height: 240px;
+  background: var(--gradient-accent-soft);
+  pointer-events: none;
+}
+
+.summary-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 70%;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--gradient-accent-line);
+  transform: translateX(-50%);
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+.summary-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .summary-card__label {
@@ -222,6 +258,18 @@ a:hover {
   margin: 0;
   font-size: 30px;
   letter-spacing: -0.01em;
+  position: relative;
+}
+
+.section__title::after {
+  content: '';
+  display: block;
+  width: 72px;
+  height: 3px;
+  margin: 14px auto 0;
+  border-radius: 999px;
+  background: var(--gradient-accent-line);
+  opacity: 0.85;
 }
 
 .section__subtitle {
@@ -315,6 +363,39 @@ a:hover {
   display: grid;
   gap: 18px;
   box-shadow: var(--shadow-soft);
+  position: relative;
+  overflow: hidden;
+}
+
+.group-card::before {
+  content: '';
+  position: absolute;
+  bottom: -40%;
+  left: -25%;
+  width: 260px;
+  height: 260px;
+  background: var(--gradient-accent-soft);
+  pointer-events: none;
+  opacity: 0.75;
+}
+
+.group-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 65%;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--gradient-accent-line);
+  transform: translateX(-50%);
+  pointer-events: none;
+  opacity: 0.75;
+}
+
+.group-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .group-card__header {
@@ -570,6 +651,38 @@ a:hover {
   display: grid;
   gap: 10px;
   box-shadow: var(--shadow-soft);
+  position: relative;
+  overflow: hidden;
+}
+
+.rules-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -30%;
+  width: 260px;
+  height: 260px;
+  background: var(--gradient-accent-soft);
+  pointer-events: none;
+}
+
+.rules-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 60%;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--gradient-accent-line);
+  transform: translateX(-50%);
+  pointer-events: none;
+  opacity: 0.75;
+}
+
+.rules-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .rules-card__title {
