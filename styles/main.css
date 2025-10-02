@@ -214,6 +214,8 @@ a:hover {
   flex-direction: column;
   gap: 12px;
   margin-bottom: 28px;
+  align-items: center;
+  text-align: center;
 }
 
 .section__title {
@@ -232,6 +234,7 @@ a:hover {
   display: inline-flex;
   flex-wrap: wrap;
   gap: 12px;
+  justify-content: center;
 }
 
 .tabs__button {
