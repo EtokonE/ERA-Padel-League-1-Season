@@ -4,3 +4,5 @@ description: Смешанные пары
 groups:
 - id: mix-01
   file: groups/mix-01.yml
+- id: mix-02
+  file: groups/mix-02.yml
