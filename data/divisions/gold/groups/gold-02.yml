@@ -26,4 +26,12 @@ teams:
   players:
   - Рита Сизова
   - Дмитрий Комаров
-matches: []
+matches:
+- id: gold-02-001
+  home: Максим Калинин - Степан Осипов
+  away: Антон Журенков - Глеб Чабров
+  round: 1
+  date: '2025-10-07'
+  result:
+    status: scheduled
+    reason: Корт забронирован
