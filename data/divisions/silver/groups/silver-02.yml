@@ -21,4 +21,12 @@ teams:
   players:
   - Даниил Лебедев
   - Всеволод Сальников
-matches: []
+matches:
+- id: silver-02-001
+  home: Тимур Чарыев - Артем Логинов
+  away: Даниил Лебедев - Всеволод Сальников
+  round: 1
+  date: '2025-10-07'
+  result:
+    status: scheduled
+    reason: 18:00-19:30

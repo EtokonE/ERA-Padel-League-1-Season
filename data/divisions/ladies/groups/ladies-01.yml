@@ -52,3 +52,27 @@ matches:
       away: 3
     - home: 7
       away: 6
+- id: ladies-01-002
+  home: Серафима Кардакова - Елена Лежнина
+  away: Екатерина Федорова - Дарья Мязова
+  round: 2
+  date: '2025-10-10'
+  result:
+    status: scheduled
+    reason: 09:30-11:30
+- id: ladies-01-003
+  home: Кристина Кокоркина - Полина Белякова
+  away: Светлана Баумова - Виктория Баркова
+  round: 3
+  date: '2025-10-10'
+  result:
+    status: scheduled
+    reason: 10:00-12:00
+- id: ladies-01-004
+  home: Серафима Кардакова - Елена Лежнина
+  away: Кристина Кокоркина - Полина Белякова
+  round: 4
+  date: '2025-10-14'
+  result:
+    status: scheduled
+    reason: 10:00-11:30

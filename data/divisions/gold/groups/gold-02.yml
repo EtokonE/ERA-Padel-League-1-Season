@@ -34,4 +34,4 @@ matches:
   date: '2025-10-07'
   result:
     status: scheduled
-    reason: Корт забронирован
+    reason: 17:00-19:00

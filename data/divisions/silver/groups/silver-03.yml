@@ -21,4 +21,12 @@ teams:
   players:
   - Сергей Шевелев
   - Евгений Коршунов
-matches: []
+matches:
+- id: silver-03-001
+  home: Артём Субботин - Роман Самохвалов
+  away: Гурген Харатян - Леонид Бухтеев
+  round: 1
+  date: '2025-10-07'
+  result:
+    status: scheduled
+    reason: 18:00-20:00
