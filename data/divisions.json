@@ -85,7 +85,33 @@
               ]
             }
           ],
-          "matches": []
+          "matches": [
+            {
+              "id": "gold-01-001",
+              "home": "Мария Бабич - Никита Мирошниченко",
+              "away": "Игорь Разумов - Евгений Бояркин",
+              "round": 1,
+              "date": "2025-10-07",
+              "result": {
+                "status": "played",
+                "winner": "home",
+                "sets": [
+                  {
+                    "home": 7,
+                    "away": 6
+                  },
+                  {
+                    "home": 2,
+                    "away": 6
+                  },
+                  {
+                    "home": 6,
+                    "away": 0
+                  }
+                ]
+              }
+            }
+          ]
         },
         {
           "id": "gold-02",
@@ -140,8 +166,18 @@
               "round": 1,
               "date": "2025-10-07",
               "result": {
-                "status": "scheduled",
-                "reason": "17:00-19:00"
+                "status": "played",
+                "winner": "away",
+                "sets": [
+                  {
+                    "home": 4,
+                    "away": 6
+                  },
+                  {
+                    "home": 2,
+                    "away": 6
+                  }
+                ]
               }
             }
           ]
@@ -245,8 +281,18 @@
               "round": 1,
               "date": "2025-10-07",
               "result": {
-                "status": "scheduled",
-                "reason": "18:00-19:30"
+                "status": "played",
+                "winner": "home",
+                "sets": [
+                  {
+                    "home": 6,
+                    "away": 0
+                  },
+                  {
+                    "home": 6,
+                    "away": 0
+                  }
+                ]
               }
             }
           ]
@@ -296,8 +342,18 @@
               "round": 1,
               "date": "2025-10-07",
               "result": {
-                "status": "scheduled",
-                "reason": "18:00-20:00"
+                "status": "played",
+                "winner": "home",
+                "sets": [
+                  {
+                    "home": 6,
+                    "away": 4
+                  },
+                  {
+                    "home": 6,
+                    "away": 3
+                  }
+                ]
               }
             }
           ]

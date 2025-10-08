@@ -33,5 +33,10 @@ matches:
   round: 1
   date: '2025-10-07'
   result:
-    status: scheduled
-    reason: 17:00-19:00
+    status: played
+    winner: away
+    sets:
+    - home: 4
+      away: 6
+    - home: 2
+      away: 6

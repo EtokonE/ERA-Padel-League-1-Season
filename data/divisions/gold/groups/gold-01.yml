@@ -31,4 +31,19 @@ teams:
   players:
   - Евгений Бурлаков
   - Алексей Кремнев
-matches: []
+matches:
+- id: gold-01-001
+  home: Мария Бабич - Никита Мирошниченко
+  away: Игорь Разумов - Евгений Бояркин
+  round: 1
+  date: '2025-10-07'
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 7
+      away: 6
+    - home: 2
+      away: 6
+    - home: 6
+      away: 0
