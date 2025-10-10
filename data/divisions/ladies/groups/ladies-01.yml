@@ -58,8 +58,13 @@ matches:
   round: 2
   date: '2025-10-10'
   result:
-    status: scheduled
-    reason: 09:30-11:30
+    status: played
+    winner: home
+    sets:
+    - home: 6
+      away: 1
+    - home: 6
+      away: 3
 - id: ladies-01-003
   home: Кристина Кокоркина - Полина Белякова
   away: Светлана Баумова - Виктория Баркова
