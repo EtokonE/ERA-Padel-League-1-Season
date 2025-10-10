@@ -68,11 +68,16 @@ matches:
 - id: ladies-01-003
   home: Кристина Кокоркина - Полина Белякова
   away: Светлана Баумова - Виктория Баркова
-  round: 3
+  round: 2
   date: '2025-10-10'
   result:
-    status: scheduled
-    reason: 10:00-12:00
+    status: played
+    winner: away
+    sets:
+    - home: 3
+      away: 6
+    - home: 2
+      away: 6
 - id: ladies-01-004
   home: Серафима Кардакова - Елена Лежнина
   away: Кристина Кокоркина - Полина Белякова
