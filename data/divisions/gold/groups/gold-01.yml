@@ -47,3 +47,16 @@ matches:
       away: 6
     - home: 6
       away: 0
+- id: gold-01-002
+  home: Артем Погодин - Александр Муллин
+  away: Евгений Бурлаков - Алексей Кремнев
+  round: 1
+  date: '2025-10-12'
+  result:
+    status: played
+    winner: away
+    sets:
+    - home: 3
+      away: 6
+    - home: 4
+      away: 6

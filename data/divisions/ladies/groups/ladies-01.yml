@@ -86,3 +86,18 @@ matches:
   result:
     status: scheduled
     reason: 10:00-11:30
+- id: ladies-01-005
+  home: Ирина Скупнова - Наталия Комарова
+  away: Светлана Баумова - Виктория Баркова
+  round: 3
+  date: '2025-10-12'
+  result:
+    status: played
+    winner: away
+    sets:
+    - home: 6
+      away: 1
+    - home: 1
+      away: 6
+    - home: 1
+      away: 6
