@@ -60,3 +60,70 @@ matches:
       away: 6
     - home: 4
       away: 6
+- id: gold-01-003
+  home: Игорь Разумов - Евгений Бояркин
+  away: Александр Коромыслов - Егор Круглов
+  round: 2
+  date: '2025-10-13'
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 6
+      away: 3
+    - home: 6
+      away: 3
+- id: gold-01-004
+  home: Игорь Разумов - Евгений Бояркин
+  away: Андрей Гаврилов - Александр Коняев
+  round: 2
+  date: '2025-10-13'
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 6
+      away: 2
+    - home: 6
+      away: 1
+- id: gold-01-005
+  home: Александр Коромыслов - Егор Круглов
+  away: Артем Погодин - Александр Муллин
+  round: 2
+  date: '2025-10-13'
+  result:
+    status: played
+    winner: away
+    sets:
+    - home: 2
+      away: 6
+    - home: 0
+      away: 6
+- id: gold-01-006
+  home: Андрей Гаврилов - Александр Коняев
+  away: Артем Погодин - Александр Муллин
+  round: 2
+  date: '2025-10-13'
+  result:
+    status: played
+    winner: away
+    sets:
+    - home: 2
+      away: 6
+    - home: 5
+      away: 7
+- id: gold-01-007
+  home: Евгений Бурлаков - Алексей Кремнев
+  away: Игорь Разумов - Евгений Бояркин
+  round: 3
+  date: '2025-10-14'
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 6
+      away: 7
+    - home: 6
+      away: 3
+    - home: 6
+      away: 4
