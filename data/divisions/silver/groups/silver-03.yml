@@ -35,3 +35,16 @@ matches:
       away: 4
     - home: 6
       away: 3
+- id: silver-03-002
+  home: Артём Субботин - Роман Самохвалов
+  away: Сергей Шевелев - Евгений Коршунов
+  round: 2
+  date: '2025-10-15'
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 6
+      away: 2
+    - home: 6
+      away: 0

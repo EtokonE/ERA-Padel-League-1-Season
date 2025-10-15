@@ -21,4 +21,19 @@ teams:
   players:
   - Давид Дружинин
   - Лиза Дружинина
-matches: []
+matches:
+- id: mix-02-001
+  home: Алексей Федоров - Екатерина Федорова
+  away: Марина Белова - Андрей Бэйл
+  round: 1
+  date: '2025-10-15'
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 4
+      away: 6
+    - home: 6
+      away: 3
+    - home: 6
+      away: 2

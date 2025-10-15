@@ -55,3 +55,16 @@ matches:
       away: 4
     - home: 6
       away: 3
+- id: gold-02-003
+  home: Сергей Уханов - Денис Гаджиев
+  away: Максим Калинин - Степан Осипов
+  round: 2
+  date: '2025-10-15'
+  result:
+    status: played
+    winner: away
+    sets:
+    - home: 3
+      away: 6
+    - home: 3
+      away: 6

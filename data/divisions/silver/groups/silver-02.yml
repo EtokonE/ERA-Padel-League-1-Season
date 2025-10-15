@@ -35,3 +35,16 @@ matches:
       away: 0
     - home: 6
       away: 0
+- id: silver-02-002
+  home: Тимур Чарыев - Артем Логинов
+  away: Евгений Макаров - Никита Марзаев
+  round: 2
+  date: '2025-10-15'
+  result:
+    status: played
+    winner: away
+    sets:
+    - home: 4
+      away: 6
+    - home: 4
+      away: 6
