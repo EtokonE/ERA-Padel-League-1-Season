@@ -26,4 +26,17 @@ teams:
   players:
   - Александр Воронин
   - Александр Кононов
-matches: []
+matches:
+- id: silver-01-001
+  home: Максим Прохоров - Иван Красовский
+  away: Арсений Селиванов - Владимир Счастливый
+  round: 1
+  date: '2025-10-16'
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 6
+      away: 0
+    - home: 6
+      away: 0

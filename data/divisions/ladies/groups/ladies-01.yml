@@ -106,3 +106,42 @@ matches:
       away: 6
     - home: 1
       away: 6
+- id: ladies-01-006
+  home: Евгения Яровая - Александра Гусева
+  away: Светлана Баумова - Виктория Баркова
+  round: 5
+  date: '2025-10-16'
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 6
+      away: 0
+    - home: 6
+      away: 2
+- id: ladies-01-007
+  home: Екатерина Федорова - Дарья Мязова
+  away: Кристина Кокоркина - Полина Белякова
+  round: 6
+  date: '2025-10-17'
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 6
+      away: 2
+    - home: 6
+      away: 4
+- id: ladies-01-008
+  home: Серафима Кардакова - Елена Лежнина
+  away: Ирина Скупнова - Наталия Комарова
+  round: 7
+  date: '2025-10-18'
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 7
+      away: 5
+    - home: 6
+      away: 2

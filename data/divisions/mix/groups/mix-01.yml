@@ -21,4 +21,17 @@ teams:
   players:
   - Александр Воронин
   - Надежда Шипова
-matches: []
+matches:
+- id: mix-01-001
+  home: Милена Рухлова - Артём Кичапов
+  away: Александр Воронин - Надежда Шипова
+  round: 1
+  date: '2025-10-16'
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 7
+      away: 5
+    - home: 6
+      away: 2
