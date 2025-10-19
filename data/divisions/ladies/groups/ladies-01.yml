@@ -173,3 +173,29 @@ matches:
       away: 6
     - home: 6
       away: 1
+- id: ladies-01-011
+  home: Евгения Яровая - Александра Гусева
+  away: Серафима Кардакова - Елена Лежнина
+  round: 5
+  date: '2025-10-18'
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 6
+      away: 3
+    - home: 6
+      away: 1
+- id: ladies-01-012
+  home: Евгения Яровая - Александра Гусева
+  away: Екатерина Федорова - Дарья Мязова
+  round: 6
+  date: '2025-10-18'
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 6
+      away: 1
+    - home: 6
+      away: 3

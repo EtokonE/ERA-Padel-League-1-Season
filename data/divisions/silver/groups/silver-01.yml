@@ -40,3 +40,18 @@ matches:
       away: 0
     - home: 6
       away: 0
+- id: silver-01-002
+  home: Максим Прохоров - Иван Красовский
+  away: Александр Воронин - Александр Кононов
+  round: 2
+  date: '2025-10-18'
+  result:
+    status: played
+    winner: away
+    sets:
+    - home: 6
+      away: 3
+    - home: 5
+      away: 7
+    - home: 5
+      away: 7

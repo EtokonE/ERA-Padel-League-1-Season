@@ -48,3 +48,16 @@ matches:
       away: 6
     - home: 4
       away: 6
+- id: silver-02-003
+  home: Павел Туманов - Андрей Бэйл
+  away: Даниил Лебедев - Всеволод Сальников
+  round: 3
+  date: '2025-10-18'
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 6
+      away: 4
+    - home: 6
+      away: 2

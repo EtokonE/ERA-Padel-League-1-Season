@@ -35,3 +35,18 @@ matches:
       away: 5
     - home: 6
       away: 2
+- id: mix-01-002
+  home: Милена Рухлова - Артём Кичапов
+  away: Алёна Томышева - Максим Бурилло
+  round: 2
+  date: '2025-10-19'
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 5
+      away: 7
+    - home: 6
+      away: 0
+    - home: 6
+      away: 4
