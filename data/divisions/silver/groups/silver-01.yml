@@ -55,3 +55,16 @@ matches:
       away: 7
     - home: 5
       away: 7
+- id: silver-01-003
+  home: Александр Воронин - Александр Кононов
+  away: Стас Зотов - Алексей Федоров
+  round: 2
+  date: '2025-10-19'
+  result:
+    status: played
+    winner: away
+    sets:
+    - home: 2
+      away: 6
+    - home: 2
+      away: 6

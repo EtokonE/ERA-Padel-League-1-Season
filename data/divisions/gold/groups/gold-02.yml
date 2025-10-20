@@ -68,3 +68,16 @@ matches:
       away: 6
     - home: 3
       away: 6
+- id: gold-02-004
+  home: Антон Журенков - Глеб Чабров
+  away: Рита Сизова - Дмитрий Комаров
+  round: 3
+  date: '2025-10-19'
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 6
+      away: 3
+    - home: 6
+      away: 0

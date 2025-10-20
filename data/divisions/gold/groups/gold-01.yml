@@ -127,3 +127,16 @@ matches:
       away: 3
     - home: 6
       away: 4
+- id: gold-01-008
+  home: Андрей Гаврилов - Александр Коняев
+  away: Александр Коромыслов - Егор Круглов
+  round: 3
+  date: '2025-10-19'
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 6
+      away: 2
+    - home: 6
+      away: 4

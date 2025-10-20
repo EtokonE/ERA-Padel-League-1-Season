@@ -37,3 +37,16 @@ matches:
       away: 3
     - home: 6
       away: 2
+- id: mix-02-002
+  home: Максим Калинин - Кристина Кокоркина
+  away: Давид Дружинин - Лиза Дружинина
+  round: 1
+  date: '2025-10-19'
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 6
+      away: 3
+    - home: 7
+      away: 6

@@ -199,3 +199,18 @@ matches:
       away: 1
     - home: 6
       away: 3
+- id: ladies-01-013
+  home: Екатерина Федорова - Дарья Мязова
+  away: Светлана Баумова - Виктория Баркова
+  round: 6
+  date: '2025-10-19'
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 7
+      away: 5
+    - home: 6
+      away: 7
+    - home: 7
+      away: 6
