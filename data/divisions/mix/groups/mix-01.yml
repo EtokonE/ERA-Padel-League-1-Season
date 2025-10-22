@@ -50,3 +50,16 @@ matches:
       away: 0
     - home: 6
       away: 4
+- id: mix-01-003
+  home: Алёна Томышева - Максим Бурилло
+  away: Александр Воронин - Надежда Шипова
+  round: 3
+  date: '2025-10-20'
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 6
+      away: 1
+    - home: 6
+      away: 0

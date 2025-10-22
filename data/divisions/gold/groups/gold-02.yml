@@ -81,3 +81,18 @@ matches:
       away: 3
     - home: 6
       away: 0
+- id: gold-02-005
+  home: Рита Сизова - Дмитрий Комаров
+  away: Максим Калинин - Степан Осипов
+  round: 2
+  date: '2025-10-21'
+  result:
+    status: played
+    winner: away
+    sets:
+    - home: 5
+      away: 7
+    - home: 6
+      away: 4
+    - home: 4
+      away: 6
