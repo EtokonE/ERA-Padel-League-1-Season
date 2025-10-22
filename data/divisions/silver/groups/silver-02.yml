@@ -61,3 +61,10 @@ matches:
       away: 4
     - home: 6
       away: 2
+- id: silver-02-004
+  home: Евгений Макаров - Никита Марзаев
+  away: Павел Туманов - Андрей Бэйл
+  round: 4
+  date: '2025-10-23'
+  result:
+    status: scheduled

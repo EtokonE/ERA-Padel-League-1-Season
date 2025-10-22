@@ -81,3 +81,38 @@ matches:
       away: 1
     - home: 6
       away: 4
+- id: silver-01-005
+  home: Артем Михайлов - Дмитрий Горохов
+  away: Стас Зотов - Алексей Федоров
+  round: 4
+  date: '2025-10-23T18:00:00'
+  result:
+    status: scheduled
+- id: silver-01-006
+  home: Арсений Селиванов - Иван Петров
+  away: Александр Воронин - Александр Кононов
+  round: 5
+  date: '2025-10-24'
+  result:
+    status: scheduled
+- id: silver-01-007
+  home: Арсений Селиванов - Иван Петров
+  away: Артем Михайлов - Дмитрий Горохов
+  round: 6
+  date: '2025-10-27'
+  result:
+    status: scheduled
+- id: silver-01-008
+  home: Артем Михайлов - Дмитрий Горохов
+  away: Максим Прохоров - Иван Красовский
+  round: 7
+  date: '2025-10-30T18:00:00'
+  result:
+    status: scheduled
+- id: silver-01-009
+  home: Стас Зотов - Алексей Федоров
+  away: Максим Прохоров - Иван Красовский
+  round: 8
+  date: '2025-10-31'
+  result:
+    status: scheduled

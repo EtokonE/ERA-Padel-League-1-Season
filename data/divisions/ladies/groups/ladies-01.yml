@@ -214,3 +214,24 @@ matches:
       away: 7
     - home: 7
       away: 6
+- id: ladies-01-014
+  home: Мария Корсакова - Светлана Сергеевна
+  away: Кристина Кокоркина - Полина Белякова
+  round: 8
+  date: '2025-10-22'
+  result:
+    status: scheduled
+- id: ladies-01-015
+  home: Мария Корсакова - Светлана Сергеевна
+  away: Серафима Кардакова - Елена Лежнина
+  round: 9
+  date: '2025-10-23'
+  result:
+    status: scheduled
+- id: ladies-01-016
+  home: Ирина Скупнова - Наталия Комарова
+  away: Кристина Кокоркина - Полина Белякова
+  round: 10
+  date: '2025-10-25'
+  result:
+    status: scheduled

@@ -61,3 +61,10 @@ matches:
       away: 0
     - home: 6
       away: 1
+- id: silver-03-004
+  home: Артём Субботин - Роман Самохвалов
+  away: Тимофей Щелкунов - Тимофей Шипунов
+  round: 4
+  date: '2025-10-22'
+  result:
+    status: scheduled
