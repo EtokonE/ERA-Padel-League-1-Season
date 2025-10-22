@@ -859,11 +859,26 @@
             {
               "id": "silver-03-004",
               "home": "Артём Субботин - Роман Самохвалов",
-              "away": "Тимофей Щелкунов - Тимофей Шипунов",
+              "away": "Тимофей Шипунов - Тимофей Щелкунов",
               "round": 4,
               "date": "2025-10-22",
               "result": {
-                "status": "scheduled"
+                "status": "played",
+                "winner": "away",
+                "sets": [
+                  {
+                    "home": 3,
+                    "away": 6
+                  },
+                  {
+                    "home": 6,
+                    "away": 4
+                  },
+                  {
+                    "home": 5,
+                    "away": 7
+                  }
+                ]
               }
             }
           ]
@@ -1233,7 +1248,18 @@
               "round": 8,
               "date": "2025-10-22",
               "result": {
-                "status": "scheduled"
+                "status": "played",
+                "winner": "home",
+                "sets": [
+                  {
+                    "home": 6,
+                    "away": 0
+                  },
+                  {
+                    "home": 6,
+                    "away": 1
+                  }
+                ]
               }
             },
             {
@@ -1473,7 +1499,18 @@
               "round": 2,
               "date": "2025-10-22",
               "result": {
-                "status": "scheduled"
+                "status": "played",
+                "winner": "home",
+                "sets": [
+                  {
+                    "home": 6,
+                    "away": 2
+                  },
+                  {
+                    "home": 6,
+                    "away": 2
+                  }
+                ]
               }
             }
           ]

@@ -67,4 +67,12 @@ matches:
   round: 4
   date: '2025-10-22'
   result:
-    status: scheduled
+    status: played
+    winner: away
+    sets:
+    - home: 3
+      away: 6
+    - home: 6
+      away: 4
+    - home: 5
+      away: 7

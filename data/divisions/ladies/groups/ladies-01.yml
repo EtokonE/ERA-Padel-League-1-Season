@@ -220,7 +220,13 @@ matches:
   round: 8
   date: '2025-10-22'
   result:
-    status: scheduled
+    status: played
+    winner: home
+    sets:
+    - home: 6
+      away: 0
+    - home: 6
+      away: 1
 - id: ladies-01-015
   home: Мария Корсакова - Светлана Сергеевна
   away: Серафима Кардакова - Елена Лежнина
