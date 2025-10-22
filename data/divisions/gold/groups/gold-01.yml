@@ -140,3 +140,21 @@ matches:
       away: 2
     - home: 6
       away: 4
+- id: gold-01-009
+  home: Мария Бабич - Никита Мирошниченко
+  away: Александр Коромыслов - Егор Круглов
+  round: 4
+  date: '2025-10-22'
+  result:
+    status: wo
+    winner: home
+    reason: Техническая победа
+- id: gold-01-010
+  home: Евгений Бурлаков - Алексей Кремнев
+  away: Александр Коромыслов - Егор Круглов
+  round: 5
+  date: '2025-10-22'
+  result:
+    status: wo
+    winner: home
+    reason: Техническая победа
