@@ -60,6 +60,6 @@ matches:
     winner: home
     sets:
     - home: 6
-      away: 2
+      away: 1
     - home: 6
       away: 2
