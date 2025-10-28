@@ -113,7 +113,15 @@ matches:
   round: 6
   date: '2025-10-27'
   result:
-    status: scheduled
+    status: played
+    winner: home
+    sets:
+      - home: 6
+        away: 3
+      - home: 5
+        away: 7
+      - home: 6
+        away: 3
 - id: silver-01-008
   home: Артем Михайлов - Дмитрий Горохов
   away: Максим Прохоров - Иван Красовский

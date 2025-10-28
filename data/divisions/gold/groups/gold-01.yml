@@ -158,3 +158,16 @@ matches:
     status: wo
     winner: home
     reason: Техническая победа
+- id: gold-01-011
+  home: Евгений Бурлаков - Алексей Кремнев
+  away: Мария Бабич - Никита Мирошниченко
+  round: 6
+  date: '2025-10-28'
+  result:
+    status: played
+    winner: away
+    sets:
+      - home: 7
+        away: 5
+      - home: 6
+        away: 3

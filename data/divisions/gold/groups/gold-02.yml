@@ -96,3 +96,27 @@ matches:
       away: 4
     - home: 4
       away: 6
+- id: gold-02-006
+  home: Рита Сизова - Дмитрий Комаров
+  away: Сергей Уханов - Денис Гаджиев
+  round: 3
+  date: '2025-10-24'
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 4
+      away: 6
+    - home: 6
+      away: 1
+    - home: 6
+      away: 4
+- id: gold-02-007
+  home: Рита Сизова - Дмитрий Комаров
+  away: Артур Геворгов - Виолетта Хисамова
+  round: 4
+  date: '2025-10-24'
+  result:
+    status: wo
+    winner: home
+    reason: Техническая победа, опоздание более 20 мин
