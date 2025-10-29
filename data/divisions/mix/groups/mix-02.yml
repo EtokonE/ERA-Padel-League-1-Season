@@ -63,3 +63,16 @@ matches:
       away: 1
     - home: 6
       away: 2
+- id: mix-02-004
+  home: Максим Калинин - Кристина Кокоркина
+  away: Марина Белова - Андрей Бэйл
+  round: 2
+  date: '2025-10-28'
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 6
+      away: 3
+    - home: 6
+      away: 3
