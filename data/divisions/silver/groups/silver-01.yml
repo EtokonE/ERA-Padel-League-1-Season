@@ -136,3 +136,16 @@ matches:
   date: '2025-10-31'
   result:
     status: scheduled
+- id: silver-01-010
+  home: Александр Воронин - Александр Кононов
+  away: Артем Михайлов - Дмитрий Горохов
+  round: 8
+  date: '2025-10-14'
+  result:
+    status: played
+    winner: home
+    sets:
+      - home: 6
+        away: 2
+      - home: 6
+        away: 3
