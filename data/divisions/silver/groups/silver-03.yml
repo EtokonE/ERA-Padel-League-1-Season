@@ -89,3 +89,16 @@ matches:
       away: 1
     - home: 6
       away: 3
+- id: silver-03-006
+  home: Тимофей Шипунов - Тимофей Щелкунов
+  away: Гурген Харатян - Леонид Бухтеев
+  round: 4
+  date: '2025-10-29'
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 7
+      away: 5
+    - home: 6
+      away: 4

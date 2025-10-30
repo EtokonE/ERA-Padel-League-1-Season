@@ -74,3 +74,16 @@ matches:
       away: 1
     - home: 6
       away: 3
+- id: silver-02-005
+  home: Тимур Чарыев - Артем Логинов
+  away: Павел Туманов - Андрей Бэйл
+  round: 4
+  date: '2025-10-29'
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 6
+      away: 1
+    - home: 6
+      away: 1

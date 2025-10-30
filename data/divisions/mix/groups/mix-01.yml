@@ -76,3 +76,18 @@ matches:
         away: 6
       - home: 1
         away: 6
+- id: mix-01-005
+  home: Степан Осипов - Маргарита Провоторова
+  away: Александр Воронин - Надежда Шипова
+  round: 5
+  date: '2025-10-29'
+  result:
+    status: played
+    winner: away
+    sets:
+      - home: 7
+        away: 5
+      - home: 3
+        away: 6
+      - home: 6
+        away: 3
