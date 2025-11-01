@@ -6,3 +6,5 @@ groups:
   file: groups/gold-01.yml
 - id: gold-02
   file: groups/gold-02.yml
+playoff:
+  file: playoff.yml

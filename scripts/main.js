@@ -689,7 +689,8 @@
     return ordered;
   };
 
-  const renderStandingsTable = (groupData, container) => {
+  const renderStandingsTable = (groupData, container, highlightCount = 2) => {
+    const effectiveHighlight = Number.isInteger(highlightCount) && highlightCount > 0 ? highlightCount : 0;
     const table = createEl('table', { className: 'standings-table' });
     const thead = createEl('thead');
     const headRow = createEl('tr');
@@ -701,7 +702,11 @@
 
     const tbody = createEl('tbody');
     groupData.forEach((team, index) => {
-      const row = createEl('tr', { className: index < 2 ? 'standings-table__row standings-table__row--highlight' : 'standings-table__row' });
+      const row = createEl('tr', {
+        className: index < effectiveHighlight
+          ? 'standings-table__row standings-table__row--highlight'
+          : 'standings-table__row'
+      });
 
       const rankCell = createEl('td', {
         className: 'standings-table__rank',
@@ -876,10 +881,439 @@
     container.appendChild(details);
   };
 
-  const buildGroupCard = (group, division, rules) => {
-    const { standings, matches, totals } = processGroupMatches(group, rules);
-    const rankedStandings = rankStandings(standings);
+  const collectGroupQualifiers = (playoff) => {
+    const map = new Map();
+    if (!playoff || !Array.isArray(playoff.stages)) {
+      return map;
+    }
+    playoff.stages.forEach((stage) => {
+      ensureArray(stage.matches).forEach((match) => {
+        ['home', 'away'].forEach((sideKey) => {
+          const side = match ? match[sideKey] : null;
+          const source = side && side.source ? side.source : null;
+          if (!source || source.type !== 'group' || !source.group) {
+            return;
+          }
+          const place = Number(source.place);
+          if (!Number.isFinite(place)) {
+            return;
+          }
+          const prev = map.get(source.group) || 0;
+          if (place > prev) {
+            map.set(source.group, place);
+          }
+        });
+      });
+    });
+    return map;
+  };
 
+  const describeBestOf = (value) => {
+    const numeric = Number(value);
+    if (!Number.isFinite(numeric) || numeric <= 0) {
+      return null;
+    }
+    if (numeric === 1) {
+      return 'Один сет';
+    }
+    const setsToWin = Math.floor(numeric / 2) + 1;
+    switch (setsToWin) {
+      case 1:
+        return 'До одного выигранного сета';
+      case 2:
+        return 'До двух выигранных сетов';
+      case 3:
+        return 'До трёх выигранных сетов';
+      case 4:
+        return 'До четырёх выигранных сетов';
+      default:
+        return `До ${setsToWin} выигранных сетов`;
+    }
+  };
+
+  const resolvePlayoffSide = (side, context) => {
+    const fallback = {
+      seed: null,
+      placeholder: 'Ожидаем соперника',
+      note: null,
+      source: null,
+      resolved: false,
+      name: 'Ожидаем соперника',
+      players: [],
+      club: null,
+      groupId: null,
+      groupLabel: null,
+      team: {
+        id: null,
+        name: 'Ожидаем соперника',
+        players: [],
+        club: null,
+        groupId: null,
+        groupLabel: null
+      }
+    };
+
+    if (!side) {
+      return fallback;
+    }
+
+    const seed = side.seed ? String(side.seed) : null;
+    const placeholder = side.placeholder || fallback.placeholder;
+    const note = side.note || null;
+    const source = side.source || null;
+
+    const normalizeSummary = (team) => {
+      if (!team) {
+        return null;
+      }
+      const players = ensureArray(team.players).filter(Boolean);
+      const groupId = team.groupId || (source && source.type === 'group' ? source.group : null) || null;
+      const groupLabel = team.groupLabel
+        || (groupId && context.groupLabels.has(groupId) ? context.groupLabels.get(groupId) : null)
+        || null;
+      return {
+        id: team.id || null,
+        name: team.name || placeholder,
+        players,
+        club: team.club || null,
+        groupId,
+        groupLabel
+      };
+    };
+
+    let summary = null;
+
+    if (side.teamId && context.teamsById.has(side.teamId)) {
+      summary = normalizeSummary(context.teamsById.get(side.teamId));
+    } else if (side.team && context.teamsById.has(side.team)) {
+      summary = normalizeSummary(context.teamsById.get(side.team));
+    } else if (side.name) {
+      summary = normalizeSummary({
+        id: side.teamId || null,
+        name: side.name,
+        players: side.players,
+        club: side.club,
+        groupId: side.groupId,
+        groupLabel: side.groupLabel
+      });
+    } else if (side.team) {
+      summary = normalizeSummary({
+        id: side.teamId || side.team || null,
+        name: side.team,
+        players: side.players,
+        club: side.club,
+        groupId: side.groupId,
+        groupLabel: side.groupLabel
+      });
+    }
+
+    if (!summary && source) {
+      if (source.type === 'group' && source.group && context.groupRankings.has(source.group)) {
+        const ranked = context.groupRankings.get(source.group);
+        const target = ranked.find((team) => team.rank === source.place);
+        if (target) {
+          summary = normalizeSummary({
+            id: target.id,
+            name: target.name,
+            players: target.players,
+            club: target.club,
+            groupId: source.group
+          });
+        }
+      } else if (source.type === 'match' && source.match && context.matchResults.has(source.match)) {
+        const matchOutcome = context.matchResults.get(source.match);
+        if (matchOutcome) {
+          const role = source.outcome === 'loser' ? 'loser' : 'winner';
+          const ref = matchOutcome[role];
+          if (ref && ref.team) {
+            summary = normalizeSummary(ref.team);
+          }
+        }
+      } else if (source.type === 'qualifier' && side.teamId && context.teamsById.has(side.teamId)) {
+        summary = normalizeSummary(context.teamsById.get(side.teamId));
+      }
+    }
+
+    if (!summary) {
+      summary = normalizeSummary({
+        id: side.teamId || null,
+        name: placeholder,
+        players: side.players,
+        club: side.club,
+        groupId: side.groupId,
+        groupLabel: side.groupLabel
+      }) || fallback.team;
+    }
+
+    const resolved = Boolean(summary.name && summary.name !== placeholder);
+
+    return {
+      seed,
+      placeholder,
+      note,
+      source,
+      resolved,
+      name: summary.name || placeholder,
+      players: summary.players || [],
+      club: summary.club || null,
+      groupId: summary.groupId || null,
+      groupLabel: summary.groupLabel || null,
+      team: summary
+    };
+  };
+
+  const buildPlayoffMatch = (match, stage, context) => {
+    const home = resolvePlayoffSide(match ? match.home : null, context);
+    const away = resolvePlayoffSide(match ? match.away : null, context);
+    const score = deriveScore(match);
+    const stageBest = describeBestOf(stage && stage.best_of ? stage.best_of : null);
+    const matchBest = describeBestOf(match && match.best_of ? match.best_of : null);
+    const processed = {
+      id: match && match.id ? match.id : `match-${Math.random().toString(36).slice(2, 8)}`,
+      label: match && match.label ? match.label : (stage && stage.label ? stage.label : 'Матч'),
+      stageId: stage && stage.id ? stage.id : null,
+      stageLabel: stage && stage.label ? stage.label : null,
+      shortStageLabel: stage && stage.short_label ? stage.short_label : null,
+      date: match && match.date ? match.date : null,
+      time: match && match.time ? match.time : null,
+      arena: match && match.arena ? match.arena : null,
+      note: match && match.note ? match.note : null,
+      status: score.status,
+      score,
+      bestOfText: matchBest || stageBest || null,
+      stageDescription: stage && stage.description ? stage.description : null,
+      matchDescription: match && match.description ? match.description : null,
+      setScores: score.setScores || [],
+      reason: match && match.result && match.result.reason ? match.result.reason : null,
+      home,
+      away
+    };
+
+    const outcome = {
+      id: processed.id,
+      status: score.status,
+      winner: null,
+      loser: null
+    };
+
+    if (score.status !== 'scheduled' && score.winner) {
+      const winnerKey = score.winner === 'home' ? 'home' : 'away';
+      const loserKey = winnerKey === 'home' ? 'away' : 'home';
+      outcome.winner = { side: winnerKey, team: processed[winnerKey] };
+      outcome.loser = { side: loserKey, team: processed[loserKey] };
+    }
+
+    context.matchResults.set(processed.id, outcome);
+    return processed;
+  };
+
+  const renderBracketTeam = (teamData, score, side, status) => {
+    const classes = ['bracket-team', `bracket-team--${side}`];
+    if (!teamData.resolved) {
+      classes.push('bracket-team--placeholder');
+    }
+    if (status !== 'scheduled' && score.winner === side) {
+      classes.push('bracket-team--winner');
+    }
+
+    const row = createEl('div', { className: classes.join(' ') });
+
+    if (teamData.seed) {
+      row.appendChild(createEl('span', { className: 'bracket-team__seed', textContent: teamData.seed }));
+    }
+
+    const info = createEl('div', { className: 'bracket-team__info' });
+    const players = Array.isArray(teamData.players) ? teamData.players.filter(Boolean) : [];
+    const hasStackedNames = players.length >= 1;
+
+    if (hasStackedNames) {
+      const namesBlock = createEl('div', { className: 'bracket-team__names' });
+      players.forEach((player) => {
+        namesBlock.appendChild(createEl('span', { className: 'bracket-team__name-line', textContent: player }));
+      });
+      info.appendChild(namesBlock);
+    } else {
+      info.appendChild(createEl('span', { className: 'bracket-team__name', textContent: teamData.name }));
+    }
+
+    if (teamData.groupLabel) {
+      info.appendChild(createEl('span', { className: 'bracket-team__group', textContent: teamData.groupLabel }));
+    }
+
+    if (teamData.club) {
+      info.appendChild(createEl('span', { className: 'bracket-team__club', textContent: teamData.club }));
+    }
+
+    if (!hasStackedNames && players.length) {
+      info.appendChild(createEl('span', { className: 'bracket-team__players', textContent: players.join(' · ') }));
+    }
+
+    if (teamData.note) {
+      info.appendChild(createEl('span', { className: 'bracket-team__note', textContent: teamData.note }));
+    }
+
+    row.appendChild(info);
+
+    let scoreText = '—';
+    if (status !== 'scheduled') {
+      if (score.status === 'wo' && score.winner === side) {
+        scoreText = 'WO';
+      } else if (score.sets && Object.prototype.hasOwnProperty.call(score.sets, side)) {
+        scoreText = fmtNumber(score.sets[side]);
+      } else {
+        scoreText = '0';
+      }
+    }
+    row.appendChild(createEl('span', { className: 'bracket-team__score', textContent: scoreText }));
+
+    return row;
+  };
+
+  const renderPlayoffMatchCard = (matchData) => {
+    const classes = ['bracket-match', `bracket-match--${matchData.status}`];
+    if (matchData.status !== 'scheduled') {
+      classes.push('bracket-match--completed');
+    }
+    const card = createEl('article', { className: classes.join(' ') });
+
+    const header = createEl('header', { className: 'bracket-match__header' });
+    if (matchData.shortStageLabel) {
+      header.appendChild(createEl('span', { className: 'bracket-match__badge', textContent: matchData.shortStageLabel }));
+    }
+    header.appendChild(createEl('span', { className: 'bracket-match__title', textContent: matchData.label }));
+
+    const headerMeta = [];
+    if (matchData.date) {
+      headerMeta.push(fmtShortDate(matchData.date));
+    }
+    if (matchData.time) {
+      headerMeta.push(matchData.time);
+    }
+    if (matchData.arena) {
+      headerMeta.push(matchData.arena);
+    }
+    if (headerMeta.length) {
+      header.appendChild(createEl('span', { className: 'bracket-match__meta', textContent: headerMeta.join(' • ') }));
+    }
+    card.appendChild(header);
+
+    const body = createEl('div', { className: 'bracket-match__body' });
+    body.appendChild(renderBracketTeam(matchData.home, matchData.score, 'home', matchData.status));
+    body.appendChild(renderBracketTeam(matchData.away, matchData.score, 'away', matchData.status));
+    card.appendChild(body);
+
+    const footNotes = [];
+    if (matchData.matchDescription) {
+      footNotes.push(matchData.matchDescription);
+    } else if (matchData.stageDescription) {
+      footNotes.push(matchData.stageDescription);
+    }
+    if (matchData.bestOfText) {
+      footNotes.push(matchData.bestOfText);
+    }
+    if (matchData.note) {
+      footNotes.push(matchData.note);
+    }
+    if (footNotes.length) {
+      card.appendChild(createEl('p', { className: 'bracket-match__note', textContent: footNotes.join(' • ') }));
+    }
+
+    if (matchData.status !== 'scheduled') {
+      if (matchData.setScores && matchData.setScores.length) {
+        card.appendChild(createEl('p', { className: 'bracket-match__sets', textContent: `Сеты: ${matchData.setScores.join(' · ')}` }));
+      }
+      const statusParts = [];
+      if (matchData.status === 'wo') {
+        statusParts.push('Техническая победа');
+      }
+      if (matchData.score && matchData.score.winner) {
+        const winnerName = matchData.score.winner === 'home' ? matchData.home.name : matchData.away.name;
+        statusParts.push(`Победили ${winnerName}`);
+      }
+      if (matchData.reason) {
+        statusParts.push(matchData.reason);
+      }
+      card.appendChild(createEl('p', { className: 'bracket-match__status', textContent: statusParts.join(' • ') }));
+    } else {
+      const statusParts = ['Матч ожидает результата'];
+      if (matchData.reason) {
+        statusParts.push(matchData.reason);
+      }
+      card.appendChild(createEl('p', { className: 'bracket-match__status bracket-match__status--pending', textContent: statusParts.join(' • ') }));
+    }
+
+    return card;
+  };
+
+  const buildPlayoffBracket = (division, playoff, context) => {
+    if (!playoff || !Array.isArray(playoff.stages) || !playoff.stages.length) {
+      return null;
+    }
+    const container = createEl('section', { className: 'playoff' });
+    if (division && division.id) {
+      container.setAttribute('data-division', division.id);
+    }
+    const stageCount = Array.isArray(playoff.stages) ? playoff.stages.length : 0;
+    const prefersScroll = playoff && typeof playoff.layout === 'string'
+      ? playoff.layout.toLowerCase() === 'scroll' || playoff.layout.toLowerCase() === 'slider'
+      : false;
+    if (stageCount > 3 || prefersScroll) {
+      container.classList.add('playoff--scrollable');
+    }
+    const header = createEl('header', { className: 'playoff__header' });
+    header.appendChild(createEl('h3', {
+      className: 'playoff__title',
+      textContent: playoff.title || 'Плей-офф'
+    }));
+    if (playoff.description) {
+      header.appendChild(createEl('p', { className: 'playoff__subtitle', textContent: playoff.description }));
+    }
+    container.appendChild(header);
+
+    const grid = createEl('div', { className: 'playoff__grid' });
+
+    playoff.stages.forEach((stage) => {
+      const stageNode = createEl('section', { className: 'bracket-stage' });
+      if (stage && stage.id) {
+        stageNode.setAttribute('data-stage', stage.id);
+      }
+      const stageHeader = createEl('header', { className: 'bracket-stage__header' });
+      stageHeader.appendChild(createEl('h4', {
+        className: 'bracket-stage__title',
+        textContent: stage.label || 'Раунд'
+      }));
+      const stageMeta = [];
+      const stageBest = describeBestOf(stage.best_of);
+      if (stageBest) {
+        stageMeta.push(stageBest);
+      }
+      if (stage.description) {
+        stageMeta.push(stage.description);
+      }
+      if (stageMeta.length) {
+        stageHeader.appendChild(createEl('p', {
+          className: 'bracket-stage__meta',
+          textContent: stageMeta.join(' • ')
+        }));
+      }
+      stageNode.appendChild(stageHeader);
+
+      const matchesWrap = createEl('div', { className: 'bracket-stage__matches' });
+      ensureArray(stage.matches).forEach((match) => {
+        const processed = buildPlayoffMatch(match, stage, context);
+        matchesWrap.appendChild(renderPlayoffMatchCard(processed));
+      });
+      stageNode.appendChild(matchesWrap);
+
+      grid.appendChild(stageNode);
+    });
+
+    container.appendChild(grid);
+    return container;
+  };
+
+  const buildGroupCard = (group, division, processed, rankedStandings, highlightCount) => {
+    const { matches, totals } = processed;
     const cardOptions = { className: 'group-card' };
     if (division && division.id) {
       cardOptions.attrs = { 'data-division': division.id };
@@ -897,7 +1331,7 @@
     header.appendChild(createEl('p', { className: 'group-card__meta', textContent: metaParts.join(' • ') }));
     card.appendChild(header);
 
-    renderStandingsTable(rankedStandings, card);
+    renderStandingsTable(rankedStandings, card, highlightCount);
     renderMatchesList(matches, card);
 
     return card;
@@ -990,16 +1424,64 @@
     elements.divisionPanel.setAttribute('id', panelId);
     elements.divisionPanel.setAttribute('aria-labelledby', tabId);
 
+    const rules = getRules(state.data);
     const groups = ensureArray(division.groups);
     if (!groups.length) {
       elements.divisionPanel.appendChild(createEl('p', { textContent: 'Группы пока не сформированы.' }));
       return;
     }
 
+    const playoff = division.playoff || null;
+    const qualifierSpots = collectGroupQualifiers(playoff);
+
+    const groupAnalyses = groups.map((group) => {
+      const processed = processGroupMatches(group, rules);
+      const ranked = rankStandings(processed.standings);
+      const highlightCount = Math.max(
+        qualifierSpots.has(group.id) ? qualifierSpots.get(group.id) : 2,
+        0
+      );
+      return { group, processed, ranked, highlightCount };
+    });
+
+    const bracketContext = {
+      groupRankings: new Map(),
+      groupLabels: new Map(),
+      teamsById: new Map(),
+      matchResults: new Map()
+    };
+
+    groupAnalyses.forEach(({ group, processed, ranked }) => {
+      if (group && group.id) {
+        bracketContext.groupRankings.set(group.id, ranked);
+        bracketContext.groupLabels.set(group.id, group.label || group.id);
+      }
+      ensureArray(processed.standings).forEach((team) => {
+        if (!team || !team.id) {
+          return;
+        }
+        if (!bracketContext.teamsById.has(team.id)) {
+          bracketContext.teamsById.set(team.id, {
+            id: team.id,
+            name: team.name,
+            players: ensureArray(team.players),
+            club: team.club || null,
+            groupId: group && group.id ? group.id : null,
+            groupLabel: group && (group.label || group.id) ? (group.label || group.id) : null
+          });
+        }
+      });
+    });
+
+    const bracketNode = buildPlayoffBracket(division, playoff, bracketContext);
+    if (bracketNode) {
+      elements.divisionPanel.appendChild(bracketNode);
+    }
+
     const grid = createEl('div', { className: 'group-grid' });
 
-    groups.forEach((group) => {
-      const card = buildGroupCard(group, division, getRules(state.data));
+    groupAnalyses.forEach(({ group, processed, ranked, highlightCount }) => {
+      const card = buildGroupCard(group, division, processed, ranked, highlightCount);
       grid.appendChild(card);
     });
 

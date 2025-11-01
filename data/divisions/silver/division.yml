@@ -8,3 +8,5 @@ groups:
   file: groups/silver-02.yml
 - id: silver-03
   file: groups/silver-03.yml
+playoff:
+  file: playoff.yml

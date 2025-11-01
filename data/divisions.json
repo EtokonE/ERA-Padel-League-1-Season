@@ -297,12 +297,12 @@
                 "winner": "away",
                 "sets": [
                   {
-                    "home": 7,
-                    "away": 5
+                    "home": 5,
+                    "away": 7
                   },
                   {
-                    "home": 6,
-                    "away": 3
+                    "home": 3,
+                    "away": 6
                   }
                 ]
               }
@@ -549,7 +549,137 @@
             }
           ]
         }
-      ]
+      ],
+      "playoff": {
+        "id": "gold-playoff",
+        "title": "Плей-офф",
+        "stages": [
+          {
+            "id": "semifinals",
+            "label": "1/2 финала",
+            "short_label": "1/2",
+            "best_of": 3,
+            "matches": [
+              {
+                "id": "gold-sf-1",
+                "label": "Полуфинал 1",
+                "home": {
+                  "seed": "A1",
+                  "placeholder": "1 место группы Gold 1",
+                  "source": {
+                    "type": "group",
+                    "group": "gold-01",
+                    "place": 1
+                  }
+                },
+                "away": {
+                  "seed": "B2",
+                  "placeholder": "2 место группы Gold 2",
+                  "source": {
+                    "type": "group",
+                    "group": "gold-02",
+                    "place": 2
+                  }
+                },
+                "result": {
+                  "status": "scheduled"
+                }
+              },
+              {
+                "id": "gold-sf-2",
+                "label": "Полуфинал 2",
+                "home": {
+                  "seed": "B1",
+                  "placeholder": "1 место группы Gold 2",
+                  "source": {
+                    "type": "group",
+                    "group": "gold-02",
+                    "place": 1
+                  }
+                },
+                "away": {
+                  "seed": "A2",
+                  "placeholder": "2 место группы Gold 1",
+                  "source": {
+                    "type": "group",
+                    "group": "gold-01",
+                    "place": 2
+                  }
+                },
+                "result": {
+                  "status": "scheduled"
+                }
+              }
+            ]
+          },
+          {
+            "id": "bronze",
+            "label": "Матч за 3 место",
+            "short_label": "3 место",
+            "best_of": 3,
+            "matches": [
+              {
+                "id": "gold-bronze",
+                "label": "Матч за 3 место",
+                "home": {
+                  "seed": "L1",
+                  "placeholder": "Проигравший полуфинала 1",
+                  "source": {
+                    "type": "match",
+                    "match": "gold-sf-1",
+                    "outcome": "loser"
+                  }
+                },
+                "away": {
+                  "seed": "L2",
+                  "placeholder": "Проигравший полуфинала 2",
+                  "source": {
+                    "type": "match",
+                    "match": "gold-sf-2",
+                    "outcome": "loser"
+                  }
+                },
+                "result": {
+                  "status": "scheduled"
+                }
+              }
+            ]
+          },
+          {
+            "id": "final",
+            "label": "Финал",
+            "short_label": "Финал",
+            "best_of": 3,
+            "matches": [
+              {
+                "id": "gold-final",
+                "label": "Финал",
+                "home": {
+                  "seed": "W1",
+                  "placeholder": "Победитель полуфинала 1",
+                  "source": {
+                    "type": "match",
+                    "match": "gold-sf-1",
+                    "outcome": "winner"
+                  }
+                },
+                "away": {
+                  "seed": "W2",
+                  "placeholder": "Победитель полуфинала 2",
+                  "source": {
+                    "type": "match",
+                    "match": "gold-sf-2",
+                    "outcome": "winner"
+                  }
+                },
+                "result": {
+                  "status": "scheduled"
+                }
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "silver",
@@ -1162,7 +1292,246 @@
             }
           ]
         }
-      ]
+      ],
+      "playoff": {
+        "id": "silver-playoff",
+        "title": "Плей-офф",
+        "stages": [
+          {
+            "id": "quarterfinals",
+            "label": "1/4 финала",
+            "short_label": "1/4",
+            "best_of": 1,
+            "description": "Матчи играются до одного сета",
+            "matches": [
+              {
+                "id": "silver-qf-1",
+                "label": "Четвертьфинал 1",
+                "home": {
+                  "seed": "A1",
+                  "placeholder": "1 место группы Silver 1",
+                  "source": {
+                    "type": "group",
+                    "group": "silver-01",
+                    "place": 1
+                  }
+                },
+                "away": {
+                  "seed": "WC2",
+                  "placeholder": "2-я лучшая команда, занявшая 3-е место",
+                  "source": {
+                    "type": "qualifier",
+                    "id": "best-third-2"
+                  },
+                  "teamId": "Гурген Харатян - Леонид Бухтеев"
+                },
+                "result": {
+                  "status": "scheduled"
+                }
+              },
+              {
+                "id": "silver-qf-2",
+                "label": "Четвертьфинал 2",
+                "home": {
+                  "seed": "B1",
+                  "placeholder": "1 место группы Silver 2",
+                  "source": {
+                    "type": "group",
+                    "group": "silver-02",
+                    "place": 1
+                  }
+                },
+                "away": {
+                  "seed": "C2",
+                  "placeholder": "2 место группы Silver 3",
+                  "source": {
+                    "type": "group",
+                    "group": "silver-03",
+                    "place": 2
+                  }
+                },
+                "result": {
+                  "status": "scheduled"
+                }
+              },
+              {
+                "id": "silver-qf-3",
+                "label": "Четвертьфинал 3",
+                "home": {
+                  "seed": "C1",
+                  "placeholder": "1 место группы Silver 3",
+                  "source": {
+                    "type": "group",
+                    "group": "silver-03",
+                    "place": 1
+                  }
+                },
+                "away": {
+                  "seed": "WC1",
+                  "placeholder": "Лучшая команда, занявшая 3-е место",
+                  "source": {
+                    "type": "qualifier",
+                    "id": "best-third-1"
+                  },
+                  "teamId": "Максим Прохоров - Иван Красовский"
+                },
+                "result": {
+                  "status": "scheduled"
+                }
+              },
+              {
+                "id": "silver-qf-4",
+                "label": "Четвертьфинал 4",
+                "home": {
+                  "seed": "A2",
+                  "placeholder": "2 место группы Silver 1",
+                  "source": {
+                    "type": "group",
+                    "group": "silver-01",
+                    "place": 2
+                  }
+                },
+                "away": {
+                  "seed": "B2",
+                  "placeholder": "2 место группы Silver 2",
+                  "source": {
+                    "type": "group",
+                    "group": "silver-02",
+                    "place": 2
+                  }
+                },
+                "result": {
+                  "status": "scheduled"
+                }
+              }
+            ]
+          },
+          {
+            "id": "semifinals",
+            "label": "1/2 финала",
+            "short_label": "1/2",
+            "best_of": 3,
+            "matches": [
+              {
+                "id": "silver-sf-1",
+                "label": "Полуфинал 1",
+                "home": {
+                  "seed": "WQF1",
+                  "placeholder": "Победитель четвертьфинала 1",
+                  "source": {
+                    "type": "match",
+                    "match": "silver-qf-1",
+                    "outcome": "winner"
+                  }
+                },
+                "away": {
+                  "seed": "WQF4",
+                  "placeholder": "Победитель четвертьфинала 4",
+                  "source": {
+                    "type": "match",
+                    "match": "silver-qf-4",
+                    "outcome": "winner"
+                  }
+                },
+                "result": {
+                  "status": "scheduled"
+                }
+              },
+              {
+                "id": "silver-sf-2",
+                "label": "Полуфинал 2",
+                "home": {
+                  "seed": "WQF2",
+                  "placeholder": "Победитель четвертьфинала 2",
+                  "source": {
+                    "type": "match",
+                    "match": "silver-qf-2",
+                    "outcome": "winner"
+                  }
+                },
+                "away": {
+                  "seed": "WQF3",
+                  "placeholder": "Победитель четвертьфинала 3",
+                  "source": {
+                    "type": "match",
+                    "match": "silver-qf-3",
+                    "outcome": "winner"
+                  }
+                },
+                "result": {
+                  "status": "scheduled"
+                }
+              }
+            ]
+          },
+          {
+            "id": "bronze",
+            "label": "Матч за 3 место",
+            "short_label": "3 место",
+            "best_of": 3,
+            "matches": [
+              {
+                "id": "silver-bronze",
+                "label": "Матч за 3 место",
+                "home": {
+                  "seed": "LSF1",
+                  "placeholder": "Проигравший полуфинала 1",
+                  "source": {
+                    "type": "match",
+                    "match": "silver-sf-1",
+                    "outcome": "loser"
+                  }
+                },
+                "away": {
+                  "seed": "LSF2",
+                  "placeholder": "Проигравший полуфинала 2",
+                  "source": {
+                    "type": "match",
+                    "match": "silver-sf-2",
+                    "outcome": "loser"
+                  }
+                },
+                "result": {
+                  "status": "scheduled"
+                }
+              }
+            ]
+          },
+          {
+            "id": "final",
+            "label": "Финал",
+            "short_label": "Финал",
+            "best_of": 3,
+            "matches": [
+              {
+                "id": "silver-final",
+                "label": "Финал",
+                "home": {
+                  "seed": "WSF1",
+                  "placeholder": "Победитель полуфинала 1",
+                  "source": {
+                    "type": "match",
+                    "match": "silver-sf-1",
+                    "outcome": "winner"
+                  }
+                },
+                "away": {
+                  "seed": "WSF2",
+                  "placeholder": "Победитель полуфинала 2",
+                  "source": {
+                    "type": "match",
+                    "match": "silver-sf-2",
+                    "outcome": "winner"
+                  }
+                },
+                "result": {
+                  "status": "scheduled"
+                }
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "ladies",
@@ -1574,7 +1943,137 @@
             }
           ]
         }
-      ]
+      ],
+      "playoff": {
+        "id": "ladies-playoff",
+        "title": "Плей-офф",
+        "stages": [
+          {
+            "id": "semifinals",
+            "label": "1/2 финала",
+            "short_label": "1/2",
+            "best_of": 3,
+            "matches": [
+              {
+                "id": "ladies-sf-1",
+                "label": "Полуфинал 1",
+                "home": {
+                  "seed": 1,
+                  "placeholder": "1 место группы Ladies 1",
+                  "source": {
+                    "type": "group",
+                    "group": "ladies-01",
+                    "place": 1
+                  }
+                },
+                "away": {
+                  "seed": 4,
+                  "placeholder": "4 место группы Ladies 1",
+                  "source": {
+                    "type": "group",
+                    "group": "ladies-01",
+                    "place": 4
+                  }
+                },
+                "result": {
+                  "status": "scheduled"
+                }
+              },
+              {
+                "id": "ladies-sf-2",
+                "label": "Полуфинал 2",
+                "home": {
+                  "seed": 2,
+                  "placeholder": "2 место группы Ladies 1",
+                  "source": {
+                    "type": "group",
+                    "group": "ladies-01",
+                    "place": 2
+                  }
+                },
+                "away": {
+                  "seed": 3,
+                  "placeholder": "3 место группы Ladies 1",
+                  "source": {
+                    "type": "group",
+                    "group": "ladies-01",
+                    "place": 3
+                  }
+                },
+                "result": {
+                  "status": "scheduled"
+                }
+              }
+            ]
+          },
+          {
+            "id": "bronze",
+            "label": "Матч за 3 место",
+            "short_label": "3 место",
+            "best_of": 3,
+            "matches": [
+              {
+                "id": "ladies-bronze",
+                "label": "Матч за 3 место",
+                "home": {
+                  "seed": "L1",
+                  "placeholder": "Проигравший полуфинала 1",
+                  "source": {
+                    "type": "match",
+                    "match": "ladies-sf-1",
+                    "outcome": "loser"
+                  }
+                },
+                "away": {
+                  "seed": "L2",
+                  "placeholder": "Проигравший полуфинала 2",
+                  "source": {
+                    "type": "match",
+                    "match": "ladies-sf-2",
+                    "outcome": "loser"
+                  }
+                },
+                "result": {
+                  "status": "scheduled"
+                }
+              }
+            ]
+          },
+          {
+            "id": "final",
+            "label": "Финал",
+            "short_label": "Финал",
+            "best_of": 3,
+            "matches": [
+              {
+                "id": "ladies-final",
+                "label": "Финал",
+                "home": {
+                  "seed": "W1",
+                  "placeholder": "Победитель полуфинала 1",
+                  "source": {
+                    "type": "match",
+                    "match": "ladies-sf-1",
+                    "outcome": "winner"
+                  }
+                },
+                "away": {
+                  "seed": "W2",
+                  "placeholder": "Победитель полуфинала 2",
+                  "source": {
+                    "type": "match",
+                    "match": "ladies-sf-2",
+                    "outcome": "winner"
+                  }
+                },
+                "result": {
+                  "status": "scheduled"
+                }
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "mix",
@@ -1904,7 +2403,137 @@
             }
           ]
         }
-      ]
+      ],
+      "playoff": {
+        "id": "mix-playoff",
+        "title": "Плей-офф",
+        "stages": [
+          {
+            "id": "semifinals",
+            "label": "1/2 финала",
+            "short_label": "1/2",
+            "best_of": 3,
+            "matches": [
+              {
+                "id": "mix-sf-1",
+                "label": "Полуфинал 1",
+                "home": {
+                  "seed": "A1",
+                  "placeholder": "1 место группы Mix 1",
+                  "source": {
+                    "type": "group",
+                    "group": "mix-01",
+                    "place": 1
+                  }
+                },
+                "away": {
+                  "seed": "B2",
+                  "placeholder": "2 место группы Mix 2",
+                  "source": {
+                    "type": "group",
+                    "group": "mix-02",
+                    "place": 2
+                  }
+                },
+                "result": {
+                  "status": "scheduled"
+                }
+              },
+              {
+                "id": "mix-sf-2",
+                "label": "Полуфинал 2",
+                "home": {
+                  "seed": "B1",
+                  "placeholder": "1 место группы Mix 2",
+                  "source": {
+                    "type": "group",
+                    "group": "mix-02",
+                    "place": 1
+                  }
+                },
+                "away": {
+                  "seed": "A2",
+                  "placeholder": "2 место группы Mix 1",
+                  "source": {
+                    "type": "group",
+                    "group": "mix-01",
+                    "place": 2
+                  }
+                },
+                "result": {
+                  "status": "scheduled"
+                }
+              }
+            ]
+          },
+          {
+            "id": "bronze",
+            "label": "Матч за 3 место",
+            "short_label": "3 место",
+            "best_of": 3,
+            "matches": [
+              {
+                "id": "mix-bronze",
+                "label": "Матч за 3 место",
+                "home": {
+                  "seed": "L1",
+                  "placeholder": "Проигравший полуфинала 1",
+                  "source": {
+                    "type": "match",
+                    "match": "mix-sf-1",
+                    "outcome": "loser"
+                  }
+                },
+                "away": {
+                  "seed": "L2",
+                  "placeholder": "Проигравший полуфинала 2",
+                  "source": {
+                    "type": "match",
+                    "match": "mix-sf-2",
+                    "outcome": "loser"
+                  }
+                },
+                "result": {
+                  "status": "scheduled"
+                }
+              }
+            ]
+          },
+          {
+            "id": "final",
+            "label": "Финал",
+            "short_label": "Финал",
+            "best_of": 3,
+            "matches": [
+              {
+                "id": "mix-final",
+                "label": "Финал",
+                "home": {
+                  "seed": "W1",
+                  "placeholder": "Победитель полуфинала 1",
+                  "source": {
+                    "type": "match",
+                    "match": "mix-sf-1",
+                    "outcome": "winner"
+                  }
+                },
+                "away": {
+                  "seed": "W2",
+                  "placeholder": "Победитель полуфинала 2",
+                  "source": {
+                    "type": "match",
+                    "match": "mix-sf-2",
+                    "outcome": "winner"
+                  }
+                },
+                "result": {
+                  "status": "scheduled"
+                }
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }

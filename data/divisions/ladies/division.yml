@@ -4,3 +4,5 @@ description: ERA Ladies League
 groups:
 - id: ladies-01
   file: groups/ladies-01.yml
+playoff:
+  file: playoff.yml

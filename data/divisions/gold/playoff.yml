@@ -1,0 +1,90 @@
+id: gold-playoff
+title: Плей-офф
+stages:
+  - id: semifinals
+    label: 1/2 финала
+    short_label: 1/2
+    best_of: 3
+    matches:
+      - id: gold-sf-1
+        label: Полуфинал 1
+        home:
+          seed: A1
+          placeholder: 1 место группы Gold 1
+          source:
+            type: group
+            group: gold-01
+            place: 1
+        away:
+          seed: B2
+          placeholder: 2 место группы Gold 2
+          source:
+            type: group
+            group: gold-02
+            place: 2
+        result:
+          status: scheduled
+      - id: gold-sf-2
+        label: Полуфинал 2
+        home:
+          seed: B1
+          placeholder: 1 место группы Gold 2
+          source:
+            type: group
+            group: gold-02
+            place: 1
+        away:
+          seed: A2
+          placeholder: 2 место группы Gold 1
+          source:
+            type: group
+            group: gold-01
+            place: 2
+        result:
+          status: scheduled
+  - id: bronze
+    label: Матч за 3 место
+    short_label: 3 место
+    best_of: 3
+    matches:
+      - id: gold-bronze
+        label: Матч за 3 место
+        home:
+          seed: L1
+          placeholder: Проигравший полуфинала 1
+          source:
+            type: match
+            match: gold-sf-1
+            outcome: loser
+        away:
+          seed: L2
+          placeholder: Проигравший полуфинала 2
+          source:
+            type: match
+            match: gold-sf-2
+            outcome: loser
+        result:
+          status: scheduled
+  - id: final
+    label: Финал
+    short_label: Финал
+    best_of: 3
+    matches:
+      - id: gold-final
+        label: Финал
+        home:
+          seed: W1
+          placeholder: Победитель полуфинала 1
+          source:
+            type: match
+            match: gold-sf-1
+            outcome: winner
+        away:
+          seed: W2
+          placeholder: Победитель полуфинала 2
+          source:
+            type: match
+            match: gold-sf-2
+            outcome: winner
+        result:
+          status: scheduled
