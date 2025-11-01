@@ -87,3 +87,16 @@ matches:
       away: 1
     - home: 6
       away: 1
+- id: silver-02-006
+  home: Евгений Макаров - Никита Марзаев
+  away: Даниил Лебедев - Всеволод Сальников
+  round: 4
+  date: '2025-11-01'
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 6
+      away: 0
+    - home: 6
+      away: 2

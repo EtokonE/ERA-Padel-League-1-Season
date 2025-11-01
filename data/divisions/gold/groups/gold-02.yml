@@ -120,3 +120,16 @@ matches:
     status: wo
     winner: home
     reason: Техническая победа, опоздание более 20 мин
+- id: gold-02-007
+  home: Артур Геворгов - Виолетта Хисамова
+  away: Максим Калинин - Степан Осипов
+  round: 3
+  date: '2025-10-30'
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 7
+      away: 5
+    - home: 6
+      away: 4

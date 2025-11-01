@@ -65,9 +65,22 @@ matches:
       away: 2
 - id: mix-02-004
   home: Максим Калинин - Кристина Кокоркина
-  away: Марина Белова - Андрей Бэйл
+  away: Алексей Федоров - Екатерина Федорова
   round: 2
   date: '2025-10-28'
+  result:
+    status: played
+    winner: home
+    sets:
+    - home: 6
+      away: 3
+    - home: 6
+      away: 3
+- id: mix-02-005
+  home: Алексей Федоров - Екатерина Федорова
+  away: Давид Дружинин - Лиза Дружинина
+  round: 3
+  date: '2025-10-30'
   result:
     status: played
     winner: home

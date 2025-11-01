@@ -91,3 +91,16 @@ matches:
         away: 6
       - home: 6
         away: 3
+- id: mix-01-006
+  home: Степан Осипов - Маргарита Провоторова
+  away: Алёна Томышева - Максим Бурилло
+  round: 5
+  date: '2025-10-30'
+  result:
+    status: played
+    winner: away
+    sets:
+      - home: 2
+        away: 6
+      - home: 2
+        away: 6
