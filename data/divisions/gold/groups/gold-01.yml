@@ -167,10 +167,10 @@ matches:
     status: played
     winner: away
     sets:
-      - home: 7
-        away: 5
-      - home: 6
-        away: 3
+      - home: 5
+        away: 7
+      - home: 3
+        away: 6
 - id: gold-01-011
   home: Артем Погодин - Александр Муллин
   away: Мария Бабич - Никита Мирошниченко

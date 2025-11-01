@@ -54,12 +54,34 @@ def build_payload(data_root: Path) -> Dict[str, Any]:
             group_payload = load_yaml(candidate) or {}
             groups_data.append(group_payload)
 
+        playoff_payload: Dict[str, Any] | None = None
+        playoff_meta = division_meta.get('playoff')
+        if playoff_meta:
+            if isinstance(playoff_meta, dict):
+                playoff_file = playoff_meta.get('file')
+                playoff_overrides = {
+                    key: value for key, value in playoff_meta.items() if key != 'file'
+                }
+            else:
+                playoff_file = playoff_meta
+                playoff_overrides = {}
+
+            if playoff_file:
+                playoff_candidate = division_dir / playoff_file
+                if not playoff_candidate.exists():
+                    raise FileNotFoundError(f'Playoff file {playoff_candidate} is missing')
+                playoff_payload = load_yaml(playoff_candidate) or {}
+                if playoff_overrides:
+                    playoff_payload.update(playoff_overrides)
+
         division_payload = {
             key: division_meta.get(key)
             for key in ('id', 'title', 'description')
             if division_meta.get(key) is not None
         }
         division_payload['groups'] = groups_data
+        if playoff_payload is not None:
+            division_payload['playoff'] = playoff_payload
         division_payload['_order'] = order_lookup.get(division_id, len(order_lookup))
 
         divisions.append(division_payload)

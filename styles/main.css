@@ -364,7 +364,7 @@ a:hover {
   font-size: 0.95rem;
 }
 
-:is(.tabs__button, .division-pill, .division-text, .group-card)[data-division='gold'] {
+:is(.tabs__button, .division-pill, .division-text, .group-card, .playoff)[data-division='gold'] {
   --accent-color: #f5c16b;
   --accent-color-soft: rgba(245, 193, 107, 0.18);
   --accent-color-soft-strong: rgba(245, 193, 107, 0.28);
@@ -372,7 +372,7 @@ a:hover {
   --accent-color-glow: rgba(245, 193, 107, 0.42);
 }
 
-:is(.tabs__button, .division-pill, .division-text, .group-card)[data-division='silver'] {
+:is(.tabs__button, .division-pill, .division-text, .group-card, .playoff)[data-division='silver'] {
   --accent-color: #9eb2f5;
   --accent-color-soft: rgba(158, 178, 245, 0.18);
   --accent-color-soft-strong: rgba(158, 178, 245, 0.28);
@@ -380,7 +380,7 @@ a:hover {
   --accent-color-glow: rgba(158, 178, 245, 0.4);
 }
 
-:is(.tabs__button, .division-pill, .division-text, .group-card)[data-division='ladies'] {
+:is(.tabs__button, .division-pill, .division-text, .group-card, .playoff)[data-division='ladies'] {
   --accent-color: #ff8ec3;
   --accent-color-soft: rgba(255, 142, 195, 0.2);
   --accent-color-soft-strong: rgba(255, 142, 195, 0.3);
@@ -388,7 +388,7 @@ a:hover {
   --accent-color-glow: rgba(255, 142, 195, 0.45);
 }
 
-:is(.tabs__button, .division-pill, .division-text, .group-card)[data-division='mix'] {
+:is(.tabs__button, .division-pill, .division-text, .group-card, .playoff)[data-division='mix'] {
   --accent-color: #5ed9b0;
   --accent-color-soft: rgba(94, 217, 176, 0.2);
   --accent-color-soft-strong: rgba(94, 217, 176, 0.3);
@@ -408,6 +408,328 @@ a:hover {
 .division-layout {
   display: grid;
   gap: 24px;
+}
+
+.playoff {
+  --accent-color: var(--color-accent);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: grid;
+  gap: 20px;
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  overflow: hidden;
+}
+
+.playoff::before {
+  content: '';
+  position: absolute;
+  top: -35%;
+  right: -25%;
+  width: 320px;
+  height: 320px;
+  background: var(--gradient-accent-soft);
+  filter: blur(0.5px);
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+.playoff::after {
+  content: '';
+  position: absolute;
+  bottom: -40%;
+  left: -20%;
+  width: 260px;
+  height: 260px;
+  background: var(--gradient-accent-soft);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.playoff > * {
+  position: relative;
+  z-index: 1;
+}
+
+.playoff--scrollable {
+  padding-bottom: 18px;
+}
+
+.playoff--scrollable .playoff__grid {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  margin-bottom: -8px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.playoff--scrollable .playoff__grid::-webkit-scrollbar {
+  height: 6px;
+}
+
+.playoff--scrollable .playoff__grid::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+}
+
+.playoff--scrollable .playoff__grid::-webkit-scrollbar-thumb {
+  background: var(--accent-color-soft-strong, rgba(140, 123, 255, 0.28));
+  border-radius: 999px;
+}
+
+.playoff--scrollable .bracket-stage {
+  flex: 0 0 clamp(320px, 36vw, 440px);
+  scroll-snap-align: start;
+}
+
+.playoff--scrollable .bracket-stage__matches {
+  min-height: 100%;
+}
+
+.playoff__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 12px;
+}
+
+.playoff__title {
+  margin: 0;
+  font-size: 24px;
+  letter-spacing: -0.01em;
+  color: var(--accent-color);
+}
+
+.playoff__subtitle {
+  margin: 0;
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.playoff__grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.bracket-stage {
+  display: grid;
+  gap: 16px;
+}
+
+.bracket-stage__header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bracket-stage__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+.bracket-stage__meta {
+  margin: 0;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.bracket-stage__matches {
+  display: grid;
+  gap: 16px;
+}
+
+.bracket-match {
+  background: rgba(17, 22, 34, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  display: grid;
+  gap: 14px;
+  box-shadow: 0 16px 36px rgba(8, 11, 20, 0.35);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.bracket-match::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(140, 123, 255, 0.12), rgba(255, 255, 255, 0));
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.bracket-match--completed::before {
+  opacity: 0.85;
+}
+
+.playoff[data-division='gold'] .bracket-match::before {
+  background: linear-gradient(135deg, rgba(245, 193, 107, 0.18), rgba(255, 255, 255, 0));
+}
+
+.playoff[data-division='silver'] .bracket-match::before {
+  background: linear-gradient(135deg, rgba(158, 178, 245, 0.18), rgba(255, 255, 255, 0));
+}
+
+.playoff[data-division='ladies'] .bracket-match::before {
+  background: linear-gradient(135deg, rgba(255, 142, 195, 0.2), rgba(255, 255, 255, 0));
+}
+
+.playoff[data-division='mix'] .bracket-match::before {
+  background: linear-gradient(135deg, rgba(94, 217, 176, 0.22), rgba(255, 255, 255, 0));
+}
+
+.bracket-match > * {
+  position: relative;
+  z-index: 1;
+}
+
+.bracket-match__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.bracket-match__badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
+.bracket-match__title {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+.bracket-match__meta {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-left: auto;
+}
+
+.bracket-match__body {
+  display: grid;
+  gap: 10px;
+}
+
+.bracket-team {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background: rgba(0, 0, 0, 0.12);
+  transition: background var(--transition-base), transform var(--transition-base);
+}
+
+.bracket-team--winner {
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
+}
+
+.bracket-team--placeholder {
+  opacity: 0.75;
+}
+
+.bracket-team__seed {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.bracket-team__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bracket-team__names {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bracket-team__name-line {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
+.bracket-team__name {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.bracket-team__group,
+.bracket-team__club,
+.bracket-team__players,
+.bracket-team__note {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.bracket-team__players {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.bracket-team__score {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.bracket-match__note,
+.bracket-match__sets,
+.bracket-match__status {
+  margin: 0;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.bracket-match__note {
+  font-style: italic;
+}
+
+.bracket-match__status--pending {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (min-width: 1024px) {
+  .playoff__grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
 }
 
 .division-header {
