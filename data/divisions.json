@@ -582,22 +582,7 @@
                   }
                 },
                 "result": {
-                  "status": "played",
-                  "winner": "home",
-                  "sets": [
-                    {
-                      "home": 6,
-                      "away": 4
-                    },
-                    {
-                      "home": 3,
-                      "away": 6
-                    },
-                    {
-                      "home": 6,
-                      "away": 2
-                    }
-                  ]
+                  "status": "scheduled"
                 }
               },
               {

@@ -1228,7 +1228,7 @@
       }
       if (matchData.score && matchData.score.winner) {
         const winnerName = matchData.score.winner === 'home' ? matchData.home.name : matchData.away.name;
-        statusParts.push(`Победил ${winnerName}`);
+        statusParts.push(`Победили ${winnerName}`);
       }
       if (matchData.reason) {
         statusParts.push(matchData.reason);
