@@ -113,7 +113,15 @@ stages:
             match: silver-qf-4
             outcome: winner
         result:
-          status: scheduled
+          status: played
+          winner: away
+          sets:
+            - home: 6
+              away: 1
+            - home: 4
+              away: 6
+            - home: 1
+              away: 6
       - id: silver-sf-2
         label: Полуфинал 2
         home:
