@@ -60,7 +60,9 @@ stages:
             id: best-third-1
           teamId: Максим Прохоров - Иван Красовский
         result:
-          status: scheduled
+          status: wo
+          winner: home
+          reason: Техническое поражение команды Максим Прохоров - Иван Красовский
       - id: silver-qf-4
         label: Четвертьфинал 4
         home:
