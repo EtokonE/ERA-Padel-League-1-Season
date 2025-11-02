@@ -23,7 +23,14 @@ stages:
             group: mix-02
             place: 2
         result:
-          status: scheduled
+          result:
+          status: played
+          winner: home
+          sets:
+            - home: 6
+              away: 2
+            - home: 6
+              away: 4
       - id: mix-sf-2
         label: Полуфинал 2
         home:

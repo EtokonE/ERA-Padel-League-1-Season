@@ -2447,7 +2447,19 @@
                   }
                 },
                 "result": {
-                  "status": "scheduled"
+                  "result": null,
+                  "status": "played",
+                  "winner": "home",
+                  "sets": [
+                    {
+                      "home": 6,
+                      "away": 2
+                    },
+                    {
+                      "home": 6,
+                      "away": 4
+                    }
+                  ]
                 }
               },
               {
