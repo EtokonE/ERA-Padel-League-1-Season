@@ -1353,7 +1353,14 @@
                   }
                 },
                 "result": {
-                  "status": "scheduled"
+                  "status": "played",
+                  "winner": "away",
+                  "sets": [
+                    {
+                      "home": 4,
+                      "away": 6
+                    }
+                  ]
                 }
               },
               {

@@ -44,7 +44,11 @@ stages:
             group: silver-03
             place: 2
         result:
-          status: scheduled
+          status: played
+          winner: away
+          sets:
+            - home: 4
+              away: 6
       - id: silver-qf-3
         label: Четвертьфинал 3
         home:
