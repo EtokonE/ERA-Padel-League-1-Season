@@ -24,7 +24,9 @@ stages:
             id: best-third-2
           teamId: Гурген Харатян - Леонид Бухтеев
         result:
-          status: scheduled
+          status: wo
+          winner: home
+          reason: Техническое поражение команды Гурген Харатян - Леонид Бухтеев
       - id: silver-qf-2
         label: Четвертьфинал 2
         home:
