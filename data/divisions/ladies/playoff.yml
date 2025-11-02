@@ -78,7 +78,13 @@ stages:
             match: ladies-sf-2
             outcome: loser
         result:
-          status: scheduled
+          status: played
+          winner: home
+          sets:
+            - home: 6
+              away: 4
+            - home: 6
+              away: 4
   - id: final
     label: Финал
     short_label: Финал

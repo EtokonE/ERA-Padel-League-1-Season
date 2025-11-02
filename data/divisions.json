@@ -662,7 +662,22 @@
                   }
                 },
                 "result": {
-                  "status": "scheduled"
+                  "status": "played",
+                  "winner": "away",
+                  "sets": [
+                    {
+                      "home": 0,
+                      "away": 6
+                    },
+                    {
+                      "home": 6,
+                      "away": 3
+                    },
+                    {
+                      "home": 3,
+                      "away": 6
+                    }
+                  ]
                 }
               }
             ]
@@ -2126,7 +2141,18 @@
                   }
                 },
                 "result": {
-                  "status": "scheduled"
+                  "status": "played",
+                  "winner": "home",
+                  "sets": [
+                    {
+                      "home": 6,
+                      "away": 4
+                    },
+                    {
+                      "home": 6,
+                      "away": 4
+                    }
+                  ]
                 }
               }
             ]
