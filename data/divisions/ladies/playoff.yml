@@ -23,7 +23,13 @@ stages:
             group: ladies-01
             place: 4
         result:
-          status: scheduled
+          status: played
+          winner: home
+          sets:
+            - home: 6
+              away: 1
+            - home: 6
+              away: 2
       - id: ladies-sf-2
         label: Полуфинал 2
         home:
@@ -41,7 +47,15 @@ stages:
             group: ladies-01
             place: 3
         result:
-          status: scheduled
+          status: played
+          winner: away
+          sets:
+            - home: 5
+              away: 7
+            - home: 7
+              away: 5
+            - home: 2
+              away: 6
   - id: bronze
     label: Матч за 3 место
     short_label: 3 место
@@ -87,4 +101,10 @@ stages:
             match: ladies-sf-2
             outcome: winner
         result:
-          status: scheduled
+          status: played
+          winner: home
+          sets:
+            - home: 6
+              away: 0
+            - home: 6
+              away: 2

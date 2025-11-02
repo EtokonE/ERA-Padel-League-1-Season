@@ -86,7 +86,11 @@ stages:
             group: silver-02
             place: 2
         result:
-          status: scheduled
+          status: played
+          winner: away
+          sets:
+            - home: 0
+              away: 6
   - id: semifinals
     label: 1/2 финала
     short_label: 1/2
@@ -127,7 +131,13 @@ stages:
             match: silver-qf-3
             outcome: winner
         result:
-          status: scheduled
+          status: played
+          winner: away
+          sets:
+            - home: 5
+              away: 7
+            - home: 4
+              away: 6
   - id: bronze
     label: Матч за 3 место
     short_label: 3 место

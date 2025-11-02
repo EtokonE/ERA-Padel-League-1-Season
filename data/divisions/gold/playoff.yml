@@ -23,7 +23,13 @@ stages:
             group: gold-02
             place: 2
         result:
-          status: scheduled
+          status: played
+          winner: home
+          sets:
+            - home: 6
+              away: 4
+            - home: 7
+              away: 5
       - id: gold-sf-2
         label: Полуфинал 2
         home:
@@ -41,7 +47,13 @@ stages:
             group: gold-01
             place: 2
         result:
-          status: scheduled
+          status: played
+          winner: away
+          sets:
+            - home: 5
+              away: 7
+            - home: 4
+              away: 6
   - id: bronze
     label: Матч за 3 место
     short_label: 3 место

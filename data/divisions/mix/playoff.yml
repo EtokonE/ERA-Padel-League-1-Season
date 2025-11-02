@@ -48,7 +48,15 @@ stages:
             group: mix-01
             place: 2
         result:
-          status: scheduled
+          status: played
+          winner: home
+          sets:
+            - home: 6
+              away: 3
+            - home: 6
+              away: 7
+            - home: 6
+              away: 0
   - id: bronze
     label: Матч за 3 место
     short_label: 3 место

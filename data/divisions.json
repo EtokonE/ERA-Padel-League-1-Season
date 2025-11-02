@@ -582,7 +582,18 @@
                   }
                 },
                 "result": {
-                  "status": "scheduled"
+                  "status": "played",
+                  "winner": "home",
+                  "sets": [
+                    {
+                      "home": 6,
+                      "away": 4
+                    },
+                    {
+                      "home": 7,
+                      "away": 5
+                    }
+                  ]
                 }
               },
               {
@@ -607,7 +618,18 @@
                   }
                 },
                 "result": {
-                  "status": "scheduled"
+                  "status": "played",
+                  "winner": "away",
+                  "sets": [
+                    {
+                      "home": 5,
+                      "away": 7
+                    },
+                    {
+                      "home": 4,
+                      "away": 6
+                    }
+                  ]
                 }
               }
             ]
@@ -1412,7 +1434,14 @@
                   }
                 },
                 "result": {
-                  "status": "scheduled"
+                  "status": "played",
+                  "winner": "away",
+                  "sets": [
+                    {
+                      "home": 0,
+                      "away": 6
+                    }
+                  ]
                 }
               }
             ]
@@ -1470,7 +1499,18 @@
                   }
                 },
                 "result": {
-                  "status": "scheduled"
+                  "status": "played",
+                  "winner": "away",
+                  "sets": [
+                    {
+                      "home": 5,
+                      "away": 7
+                    },
+                    {
+                      "home": 4,
+                      "away": 6
+                    }
+                  ]
                 }
               }
             ]
@@ -1987,7 +2027,18 @@
                   }
                 },
                 "result": {
-                  "status": "scheduled"
+                  "status": "played",
+                  "winner": "home",
+                  "sets": [
+                    {
+                      "home": 6,
+                      "away": 1
+                    },
+                    {
+                      "home": 6,
+                      "away": 2
+                    }
+                  ]
                 }
               },
               {
@@ -2012,7 +2063,22 @@
                   }
                 },
                 "result": {
-                  "status": "scheduled"
+                  "status": "played",
+                  "winner": "away",
+                  "sets": [
+                    {
+                      "home": 5,
+                      "away": 7
+                    },
+                    {
+                      "home": 7,
+                      "away": 5
+                    },
+                    {
+                      "home": 2,
+                      "away": 6
+                    }
+                  ]
                 }
               }
             ]
@@ -2078,7 +2144,18 @@
                   }
                 },
                 "result": {
-                  "status": "scheduled"
+                  "status": "played",
+                  "winner": "home",
+                  "sets": [
+                    {
+                      "home": 6,
+                      "away": 0
+                    },
+                    {
+                      "home": 6,
+                      "away": 2
+                    }
+                  ]
                 }
               }
             ]
@@ -2484,7 +2561,22 @@
                   }
                 },
                 "result": {
-                  "status": "scheduled"
+                  "status": "played",
+                  "winner": "home",
+                  "sets": [
+                    {
+                      "home": 6,
+                      "away": 3
+                    },
+                    {
+                      "home": 6,
+                      "away": 7
+                    },
+                    {
+                      "home": 6,
+                      "away": 0
+                    }
+                  ]
                 }
               }
             ]
